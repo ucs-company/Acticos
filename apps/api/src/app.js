@@ -29,6 +29,12 @@ app.get('/sitemap.xml', sitemap);
 app.route('/api/admin', adminRoutes);
 app.route('/api', publicRoutes);
 
+app.get('*', (c) => {
+  if (c.req.path.startsWith('/api/')) return notFound(c);
+  const index = new URL('/index.html', c.req.url);
+  return c.env.ASSETS.fetch(new Request(index.toString(), { headers: c.req.raw.headers }));
+});
+
 app.notFound(notFound);
 app.onError(onError);
 
