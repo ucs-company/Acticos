@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /admin
-Sitemap: https://www.acticos.com/sitemap.xml
+Sitemap: https://acticosinternational.com/sitemap.xml

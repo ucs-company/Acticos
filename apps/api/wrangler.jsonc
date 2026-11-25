@@ -18,9 +18,9 @@
     }
   ],
   "vars": {
-    "CORS_ORIGINS": "https://www.acticos.com,https://acticos.com",
-    "PUBLIC_SITE_URL": "https://www.acticos.com",
-    "R2_PUBLIC_URL": "https://assets.acticos.com",
+    "CORS_ORIGINS": "https://acticosinternational.com,https://www.acticosinternational.com",
+    "PUBLIC_SITE_URL": "https://acticosinternational.com",
+    "R2_PUBLIC_URL": "https://assets.acticosinternational.com",
     "JWT_EXPIRES_IN": "8h"
   },
   "observability": {
