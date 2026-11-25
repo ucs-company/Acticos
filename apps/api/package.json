@@ -1,0 +1,24 @@
+{
+  "name": "@acticos/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --config wrangler.jsonc --local --port 8787",
+    "deploy": "wrangler deploy --config wrangler.jsonc",
+    "db:migrate:local": "wrangler d1 migrations apply acticos-prod --config wrangler.jsonc --local",
+    "db:migrate:remote": "wrangler d1 migrations apply acticos-prod --config wrangler.jsonc --remote",
+    "db:seed:local": "node scripts/seed-d1.mjs --local",
+    "db:seed:remote": "node scripts/seed-d1.mjs --remote --force",
+    "admin:create:local": "node scripts/create-admin.mjs --local",
+    "admin:create:remote": "node scripts/create-admin.mjs --remote --force"
+  },
+  "dependencies": {
+    "hono": "^4.6.13",
+    "jose": "^5.9.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "wrangler": "^4.167.0"
+  }
+}

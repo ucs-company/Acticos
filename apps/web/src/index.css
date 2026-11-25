@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-white font-sans text-ink antialiased; }
+  h1, h2, h3, h4 { @apply font-display tracking-tight; }
+  :focus-visible { outline: 2px solid #6FAF42; outline-offset: 3px; border-radius: 6px; }
+  ::selection { background: #4E8A2E; color: white; }
+}
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-page px-5 sm:px-8; }
+  .section { @apply py-20 md:py-28; }
+  .h-display { @apply font-display text-[2.6rem] font-semibold leading-[1.02] sm:text-6xl lg:text-[5rem]; }
+  .h-section { @apply font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-[2.9rem]; }
+  .lead { @apply max-w-[62ch] text-lg leading-relaxed text-mist-600; }
+  .lead-dark { @apply max-w-[62ch] text-lg leading-relaxed text-white/70; }
+  .hairline { @apply border border-ink/10; }
+  .field { @apply w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-base text-ink placeholder:text-mist-400 transition focus:border-electric focus:outline-none focus:ring-4 focus:ring-electric/15; }
+  .field-error { @apply border-red-500 focus:border-red-500 focus:ring-red-500/15; }
+  .grid-bg {
+    background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
+
+.skip-link { position: absolute; left: -999px; top: 8px; z-index: 100; background: #fff; color: #212121; padding: 8px 14px; border-radius: 8px; }
+.skip-link:focus { left: 8px; }
+
+@keyframes shimmer { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+.skeleton { background: linear-gradient(90deg, #E4E7E2 25%, #F4F6F2 37%, #E4E7E2 63%); background-size: 400% 100%; animation: shimmer 1.4s ease infinite; }
+
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.thumb-float { animation: floaty 6s ease-in-out infinite; }
+
+html[data-motion="off"] { scroll-behavior: auto; }
+html[data-motion="off"] *, html[data-motion="off"] *::before, html[data-motion="off"] *::after {
+  animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important;
+}

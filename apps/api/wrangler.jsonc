@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "acticos-prod-worker",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-04-01",
+  "assets": {
+    "directory": "../web/dist",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": false
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "acticos-prod",
+      "database_id": "c07129eb-0c6d-40d6-9ebf-d618dedb3f7f",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "CORS_ORIGINS": "https://www.acticos.com,https://acticos.com",
+    "PUBLIC_SITE_URL": "https://www.acticos.com",
+    "R2_PUBLIC_URL": "https://assets.acticos.com",
+    "JWT_EXPIRES_IN": "8h"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

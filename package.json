@@ -1,0 +1,20 @@
+{
+  "name": "acticos",
+  "private": true,
+  "workspaces": ["apps/web", "apps/api"],
+  "scripts": {
+    "dev:web": "npm run dev -w apps/web",
+    "dev:api": "wrangler dev --config apps/api/wrangler.jsonc --local --port 8787",
+    "build:web": "npm run build -w apps/web",
+    "db:migrate:local": "wrangler d1 migrations apply acticos-prod --config apps/api/wrangler.jsonc --local",
+    "db:migrate:remote": "wrangler d1 migrations apply acticos-prod --config apps/api/wrangler.jsonc --remote",
+    "db:seed:local": "node apps/api/scripts/seed-d1.mjs --local",
+    "db:seed:remote": "node apps/api/scripts/seed-d1.mjs --remote --force",
+    "db:import:local": "node apps/api/scripts/seed-d1.mjs --local --catalogue-only",
+    "db:import:remote": "node apps/api/scripts/seed-d1.mjs --remote --catalogue-only --force",
+    "db:sql:export": "node apps/api/scripts/seed-d1.mjs --local --catalogue-only --sql-out=data/products.sql",
+    "admin:create:local": "node apps/api/scripts/create-admin.mjs --local",
+    "admin:create:remote": "node apps/api/scripts/create-admin.mjs --remote --force",
+    "deploy": "npm run build:web && wrangler deploy --config apps/api/wrangler.jsonc"
+  }
+}

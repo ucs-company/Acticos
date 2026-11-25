@@ -1,0 +1,2433 @@
+{
+  "categories": [
+    {
+      "slug": "preservatives-speciality-ingredients",
+      "name": "Preservatives & Speciality Ingredients",
+      "visual": "preservative",
+      "description": "High-quality preservatives and speciality ingredients for cosmetics and personal care."
+    },
+    {
+      "slug": "active-ingredients",
+      "name": "Active Ingredients",
+      "visual": "active",
+      "description": "Speciality active ingredients for advanced skincare and haircare formulations."
+    },
+    {
+      "slug": "emmolient-esters",
+      "name": "Emollients & Esters",
+      "visual": "emollient",
+      "description": "High-quality emollients that improve performance, skin feel and moisturisation."
+    },
+    {
+      "slug": "proprietery-blend-actives",
+      "name": "Proprietary Blend Actives",
+      "visual": "blend",
+      "description": "Innovative proprietary blends for targeted skincare and haircare benefits."
+    }
+  ],
+  "applications": [
+    {
+      "slug": "skin-care",
+      "name": "Skin Care",
+      "description": "Serums, creams, lotions and treatments for facial and body skin care."
+    },
+    {
+      "slug": "hair-care",
+      "name": "Hair Care",
+      "description": "Shampoos, conditioners, scalp treatments and styling formulations."
+    },
+    {
+      "slug": "baby-care",
+      "name": "Baby Care",
+      "description": "Gentle, low-irritation formulations for baby skin and hair."
+    },
+    {
+      "slug": "personal-care",
+      "name": "Personal Care",
+      "description": "Body wash, hand care, deodorant and everyday personal care formats."
+    },
+    {
+      "slug": "sun-care",
+      "name": "Sun Care",
+      "description": "Sun protection and after-sun formulations."
+    },
+    {
+      "slug": "color-cosmetics",
+      "name": "Color Cosmetics",
+      "description": "Foundations, lip products and other colour formats."
+    }
+  ],
+  "solutions": [
+    {
+      "slug": "preservation",
+      "name": "Preservation",
+      "description": "Broad-spectrum protection and formulation stability."
+    },
+    {
+      "slug": "moisturization",
+      "name": "Moisturization",
+      "description": "Humectants and barrier-supporting ingredients."
+    },
+    {
+      "slug": "brightening",
+      "name": "Brightening",
+      "description": "Actives that help even tone and improve radiance."
+    },
+    {
+      "slug": "anti-aging",
+      "name": "Anti-Aging",
+      "description": "Firming, smoothing and collagen support."
+    },
+    {
+      "slug": "hair-scalp",
+      "name": "Hair & Scalp",
+      "description": "Scalp comfort and hair-strengthening actives."
+    },
+    {
+      "slug": "sun-care",
+      "name": "Sun Care",
+      "description": "Photostable support and UV protection."
+    },
+    {
+      "slug": "texture-sensory",
+      "name": "Texture / Sensory Enhancement",
+      "description": "Improved spreadability, slip and skin feel."
+    }
+  ],
+  "products": [
+    {
+      "slug": "ehgp",
+      "code": "EHGP",
+      "name": "EHGP",
+      "inci": "Phenoxyethanol, Ethylhexylglycerin",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "skin-care",
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A synergistic preservative boosting antimicrobial efficacy, shelf-life, and skin-friendly performance in personal care formulations.",
+      "benefits": [
+        "A synergistic preservative boosting antimicrobial efficacy, shelf-life, and skin-friendly performance in personal care formulations."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "EHGP (Phenoxyethanol, Ethylhexylglycerin) | Acticos",
+      "seoDescription": "A synergistic preservative boosting antimicrobial efficacy, shelf-life, and skin-friendly performance in personal care formulations.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ehg",
+      "code": "EHG",
+      "name": "EHG",
+      "inci": "Ethylhexylglycerin",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation",
+        "moisturization"
+      ],
+      "description": "Completely Odorless, Multifunctional moisturising agent, preservative booster, bacteriostatic, enhances the efficacy of conventional cosmetic preservatives.",
+      "benefits": [
+        "Completely Odorless, Multifunctional moisturising agent, preservative booster, bacteriostatic, enhances the efficacy of conventional cosmetic preservatives."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "EHG (Ethylhexylglycerin) | Acticos",
+      "seoDescription": "Completely Odorless, Multifunctional moisturising agent, preservative booster, bacteriostatic, enhances the efficacy of conventional cosmetic preserva",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "pe",
+      "code": "PE",
+      "name": "PE",
+      "inci": "Phenoxyethanol",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "Liquid cosmetic preservative, broad-spectrum antimicrobial, ensures formulation stability and safety, protects against bacteria and yeasts.",
+      "benefits": [
+        "Liquid cosmetic preservative, broad-spectrum antimicrobial, ensures formulation stability and safety, protects against bacteria and yeasts."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PE (Phenoxyethanol) | Acticos",
+      "seoDescription": "Liquid cosmetic preservative, broad-spectrum antimicrobial, ensures formulation stability and safety, protects against bacteria and yeasts.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "k830",
+      "code": "K830",
+      "name": "K830",
+      "inci": "Phenoxyethanol, Ethylhexylglycerin, Octenidine HCl",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "Offers strong fungicidal protection with excellent stability across pH, temperature, and challenging personal care formulations.",
+      "benefits": [
+        "Offers strong fungicidal protection with excellent stability across pH, temperature, and challenging personal care formulations."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "K830 (Phenoxyethanol, Ethylhexylglycerin, Octenidine HCl) | Acticos",
+      "seoDescription": "Offers strong fungicidal protection with excellent stability across pH, temperature, and challenging personal care formulations.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "k701",
+      "code": "K701",
+      "name": "K701",
+      "inci": "Phenoxyethanol, Benzoic Acid, Dehydroacetic Acid, Ethylhexylglycerin",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "skin-care",
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A liquid preservative for leave-on and rinse-off personal care products, offering broad antimicrobial protection and skin-friendly formulation compatibility.",
+      "benefits": [
+        "A liquid preservative for leave-on and rinse-off personal care products, offering broad antimicrobial protection and skin-friendly formulation compatibility."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "K701 (Phenoxyethanol, Benzoic Acid, Dehydroacetic Acid, Ethylhexylglycerin) | Acticos",
+      "seoDescription": "A liquid preservative for leave-on and rinse-off personal care products, offering broad antimicrobial protection and skin-friendly formulation compati",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "k712",
+      "code": "K712",
+      "name": "K712",
+      "inci": "Sodium Benzoate, Potassium Sorbate, Water",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "skin-care",
+        "hair-care",
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A globally approved aqueous blend providing e ective broad-spectrum preservation for personal care formulations like shampoos and lotions.",
+      "benefits": [
+        "A globally approved aqueous blend providing e ective broad-spectrum preservation for personal care formulations like shampoos and lotions."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "K712 (Sodium Benzoate, Potassium Sorbate, Water) | Acticos",
+      "seoDescription": "A globally approved aqueous blend providing e ective broad-spectrum preservation for personal care formulations like shampoos and lotions.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "k900",
+      "code": "K900",
+      "name": "K900",
+      "inci": "Benzyl Alcohol, Ethylhexylglycerin",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "skin-care",
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A broad-spectrum, low-toxicity preservative protecting emulsions, creams, lotions, and gels in leave-on and rinse-off personal care products.",
+      "benefits": [
+        "A broad-spectrum, low-toxicity preservative protecting emulsions, creams, lotions, and gels in leave-on and rinse-off personal care products."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "K900 (Benzyl Alcohol, Ethylhexylglycerin) | Acticos",
+      "seoDescription": "A broad-spectrum, low-toxicity preservative protecting emulsions, creams, lotions, and gels in leave-on and rinse-off personal care products.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "k903",
+      "code": "K903",
+      "name": "K903",
+      "inci": "Benzyl Alcohol, Benzoic Acid, Dehydroacetic Acid, Tocopherol",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "skin-care",
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A broad-spectrum, skin-friendly preservative providing e ective antimicrobial protection for personal care and leave-on/rinse-off formulations.",
+      "benefits": [
+        "A broad-spectrum, skin-friendly preservative providing e ective antimicrobial protection for personal care and leave-on/rinse-off formulations."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "K903 (Benzyl Alcohol, Benzoic Acid, Dehydroacetic Acid, Tocopherol) | Acticos",
+      "seoDescription": "A broad-spectrum, skin-friendly preservative providing e ective antimicrobial protection for personal care and leave-on/rinse-off formulations.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "peg",
+      "code": "PEG",
+      "name": "PEG",
+      "inci": "Phenoxyethanol, Triethylene glycol",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A globally approved, multifunctional preservative blend offering broad-spectrum protection and excellent stability across a wide pH range.",
+      "benefits": [
+        "A globally approved, multifunctional preservative blend offering broad-spectrum protection and excellent stability across a wide pH range."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PEG (Phenoxyethanol, Triethylene glycol) | Acticos",
+      "seoDescription": "A globally approved, multifunctional preservative blend offering broad-spectrum protection and excellent stability across a wide pH range.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "pebg",
+      "code": "PEBG",
+      "name": "PEBG",
+      "inci": "Phenoxyethanol, Ethylhexylglycerin, Benzoic Acid, Glycereth Cocoate",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A cost-effective, broad-spectrum liquid preservative free from parabens, formaldehyde, and isothiazolinones, suitable for diverse applications.",
+      "benefits": [
+        "A cost-effective, broad-spectrum liquid preservative free from parabens, formaldehyde, and isothiazolinones, suitable for diverse applications."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PEBG (Phenoxyethanol, Ethylhexylglycerin, Benzoic Acid, Glycereth Cocoate) | Acticos",
+      "seoDescription": "A cost-effective, broad-spectrum liquid preservative free from parabens, formaldehyde, and isothiazolinones, suitable for diverse applications.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cg",
+      "code": "CG",
+      "name": "CG",
+      "inci": "Caprylyl Glycol",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "skin-care",
+        "personal-care"
+      ],
+      "functions": [
+        "preservation",
+        "moisturization",
+        "texture-sensory"
+      ],
+      "description": "Low odor humectant, skin conditioning, emollient, antimicrobial, preservative booster for personal care formulations.",
+      "benefits": [
+        "Low odor humectant, skin conditioning, emollient, antimicrobial, preservative booster for personal care formulations."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "CG (Caprylyl Glycol) | Acticos",
+      "seoDescription": "Low odor humectant, skin conditioning, emollient, antimicrobial, preservative booster for personal care formulations.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "hg",
+      "code": "HG",
+      "name": "HG",
+      "inci": "1,2-Hexanediol",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "skin-care",
+        "baby-care"
+      ],
+      "functions": [
+        "preservation",
+        "moisturization"
+      ],
+      "description": "Completely Odorless, moisturising agent, preservative booster, antiseptic, safe for sensitive and infant skin, water & oil soluble.",
+      "benefits": [
+        "Completely Odorless, moisturising agent, preservative booster, antiseptic, safe for sensitive and infant skin, water & oil soluble."
+      ],
+      "technicalInfo": {
+        "Solubility": "oil soluble"
+      },
+      "seoTitle": "HG (1,2-Hexanediol) | Acticos",
+      "seoDescription": "Completely Odorless, moisturising agent, preservative booster, antiseptic, safe for sensitive and infant skin, water & oil soluble.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "dmdmh",
+      "code": "DMDMH",
+      "name": "DMDMH",
+      "inci": "DMDM Hydantoin",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A water-soluble, broad-spectrum preservative offering e ective protection against bacteria, yeast, and mold in personal care formulations.",
+      "benefits": [
+        "A water-soluble, broad-spectrum preservative offering e ective protection against bacteria, yeast, and mold in personal care formulations."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DMDMH (DMDM Hydantoin) | Acticos",
+      "seoDescription": "A water-soluble, broad-spectrum preservative offering e ective protection against bacteria, yeast, and mold in personal care formulations.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "kcg",
+      "code": "KCG",
+      "name": "KCG",
+      "inci": "Methylchloroisothiazolinone, Methylisothiazolinone",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A cost-effective, low-odor preservative ideal for rinse-off products, offering broad efficacy across a wide pH range at low use levels.",
+      "benefits": [
+        "A cost-effective, low-odor preservative ideal for rinse-off products, offering broad efficacy across a wide pH range at low use levels."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "KCG (Methylchloroisothiazolinone, Methylisothiazolinone) | Acticos",
+      "seoDescription": "A cost-effective, low-odor preservative ideal for rinse-off products, offering broad efficacy across a wide pH range at low use levels.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "k510",
+      "code": "K510",
+      "name": "K510",
+      "inci": "DMDM Hydantoin, Methylchloroisothiazolinone, Methylisothiazolinone",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A liquid broad-spectrum preservative with CMIT/MIT and DMDM Hydantoin, providing effective antimicrobial protection against bacteria, yeasts, and molds, even at low use levels.",
+      "benefits": [
+        "A liquid broad-spectrum preservative with CMIT/MIT and DMDM Hydantoin, providing effective antimicrobial protection against bacteria, yeasts, and molds, even at low use levels."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "K510 (DMDM Hydantoin, Methylchloroisothiazolinone, Methylisothiazolinone) | Acticos",
+      "seoDescription": "A liquid broad-spectrum preservative with CMIT/MIT and DMDM Hydantoin, providing effective antimicrobial protection against bacteria, yeasts, and mold",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "mci-mit-mcit",
+      "code": "MCI-MIT-MCIT",
+      "name": "MCI (MIT/MCIT)",
+      "inci": "Methylchloro isothiazolinone/ Methylisothia zolinone",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A liquid, broad-spectrum preservative system providing reliable protection against bacteria, yeast, and mold. Easy to incorporate and suitable for water-based, emulsion, rinse-off, and leave-on formulations.",
+      "benefits": [
+        "A liquid, broad-spectrum preservative system providing reliable protection against bacteria, yeast, and mold.",
+        "Easy to incorporate and suitable for water-based, emulsion, rinse-off, and leave-on formulations."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "MCI (MIT/MCIT) (Methylchloro isothiazolinone/ Methylisothia zolinone) | Acticos",
+      "seoDescription": "A liquid, broad-spectrum preservative system providing reliable protection against bacteria, yeast, and mold. Easy to incorporate and suitable for wat",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "dpm",
+      "code": "DPM",
+      "name": "DPM",
+      "inci": "Propylene glycol, Methyl Paraben, Propyl Paraben, Diazolidinyl ure",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A powerful preservative blend ensuring long-lasting defense against microbes in personal care products.",
+      "benefits": [
+        "A powerful preservative blend ensuring long-lasting defense against microbes in personal care products."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DPM (Propylene glycol, Methyl Paraben, Propyl Paraben, Diazolidinyl ure) | Acticos",
+      "seoDescription": "A powerful preservative blend ensuring long-lasting defense against microbes in personal care products.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "pdi",
+      "code": "PDI",
+      "name": "PDI",
+      "inci": "Diazolidinyl Urea, Iodopropynyl Butylcarbamate, Propylene Glycol",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [],
+      "description": "A liquid broad-spectrum preservative for emulsions and aqueous personal care products.",
+      "benefits": [
+        "A liquid broad-spectrum preservative for emulsions and aqueous personal care products."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PDI (Diazolidinyl Urea, Iodopropynyl Butylcarbamate, Propylene Glycol) | Acticos",
+      "seoDescription": "A liquid broad-spectrum preservative for emulsions and aqueous personal care products.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cha",
+      "code": "CHA",
+      "name": "CHA",
+      "inci": "Caprylhydroxamic Acid",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "Offers preservative efficacy against molds; usually combined with glycerin or a diol to support a more conventional, broad-spectrum preservative system. Soluble in glycol or diol. Dosage: 0.1-0.5%.",
+      "benefits": [
+        "Offers preservative efficacy against molds; usually combined with glycerin or a diol to support a more conventional, broad-spectrum preservative system.",
+        "Soluble in glycol or diol.",
+        "Dosage: 0.1-0.5%."
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "0"
+      },
+      "seoTitle": "CHA (Caprylhydroxamic Acid) | Acticos",
+      "seoDescription": "Offers preservative efficacy against molds; usually combined with glycerin or a diol to support a more conventional, broad-spectrum preservative syste",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "hap",
+      "code": "HAP",
+      "name": "HAP",
+      "inci": "4-hydroxyacetoPhenone",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation",
+        "moisturization"
+      ],
+      "description": "Antioxidant and humectant, help boost preservative systems, soothing.Soluble in any Glycol or Glycerin or Phenoxyethanol or Ethanol. Dosage:0.1-0.5%",
+      "benefits": [
+        "Antioxidant and humectant, help boost preservative systems, soothing.Soluble in any Glycol or Glycerin or Phenoxyethanol or Ethanol.",
+        "Dosage:0.1-0.5%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "0",
+        "Solubility": "Soluble in any Glycol or Glycerin or Phenoxyethanol or Ethanol"
+      },
+      "seoTitle": "HAP (4-hydroxyacetoPhenone) | Acticos",
+      "seoDescription": "Antioxidant and humectant, help boost preservative systems, soothing.Soluble in any Glycol or Glycerin or Phenoxyethanol or Ethanol. Dosage:0.1-0.5%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ppo",
+      "code": "PPO",
+      "name": "PPO",
+      "inci": "1,3-Propanediol",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "preservation",
+        "moisturization",
+        "texture-sensory"
+      ],
+      "description": "Humectant, solvent and preservative booster. Improves absorption of ingredients. Emollient and solvent with preservative effect. Water soluble. Dosage: 1-20%",
+      "benefits": [
+        "Humectant, solvent and preservative booster.",
+        "Improves absorption of ingredients.",
+        "Emollient and solvent with preservative effect.",
+        "Water soluble."
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "1-20%",
+        "Solubility": "Water soluble"
+      },
+      "seoTitle": "PPO (1,3-Propanediol) | Acticos",
+      "seoDescription": "Humectant, solvent and preservative booster. Improves absorption of ingredients. Emollient and solvent with preservative effect. Water soluble. Dosage",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "pdp",
+      "code": "PDP",
+      "name": "PDP",
+      "inci": "Diazolidinyl Urea, Iodopropynyl butylcarbamate",
+      "category": "preservatives-speciality-ingredients",
+      "applications": [
+        "hair-care",
+        "personal-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A cost-effective, broad-spectrum preservative for rinse-off personal care products, providing strong antimicrobial protection in shampoos, conditioners, and wet wipes.",
+      "benefits": [
+        "A cost-effective, broad-spectrum preservative for rinse-off personal care products, providing strong antimicrobial protection in shampoos, conditioners, and wet wipes."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PDP (Diazolidinyl Urea, Iodopropynyl butylcarbamate) | Acticos",
+      "seoDescription": "A cost-effective, broad-spectrum preservative for rinse-off personal care products, providing strong antimicrobial protection in shampoos, conditioner",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "betaine-anhydrous-natural",
+      "code": "Betaine-Anhydrous-Natural",
+      "name": "Betaine Anhydrous (Natural)",
+      "inci": "Betaine",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care",
+        "hair-care"
+      ],
+      "functions": [
+        "moisturization",
+        "hair-scalp",
+        "texture-sensory"
+      ],
+      "description": "BETAINE is a natural osmolyte an amino acid derivative naturally occurring in nature. It provides excellent Skin moisturization, protection & sensory benefits. It provides Hydration, Soothes irritating skin & protects the skin from denaturation. BETAINE also has plenty of Hair care benefits by offering Anti-frizz properties, protects and strengthen hair & scalp, improves dry combing, and due to its moisturizing property it helps preventing hair",
+      "benefits": [
+        "BETAINE is a natural osmolyte an amino acid derivative naturally occurring in nature.",
+        "It provides excellent Skin moisturization, protection & sensory benefits.",
+        "It provides Hydration, Soothes irritating skin & protects the skin from denaturation.",
+        "BETAINE also has plenty of Hair care benefits by offering Anti-frizz properties, protects and strengthen hair & scalp, improves dry combing, and due to its moisturizing property it helps preventing hair"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "Betaine Anhydrous (Natural) (Betaine) | Acticos",
+      "seoDescription": "BETAINE is a natural osmolyte an amino acid derivative naturally occurring in nature. It provides excellent Skin moisturization, protection & sensory ",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "alpha-arbutin",
+      "code": "Alpha-Arbutin",
+      "name": "Alpha Arbutin",
+      "inci": "Alpha Arbutin",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "getting dry and brittle. Alpha Arbutin is a functional ingredient for skin lightening. It helps in Skin whitening, Skin lightening and is Hydroquinone free. Alpha arbutin inhibits the enzyme tyrosinase, so that the color pigment melanin is only produced to a smaller",
+      "benefits": [
+        "getting dry and brittle.",
+        "Alpha Arbutin is a functional ingredient for skin lightening.",
+        "It helps in Skin whitening, Skin lightening and is Hydroquinone free.",
+        "Alpha arbutin inhibits the enzyme tyrosinase, so that the color pigment melanin is only produced to a smaller"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "Alpha Arbutin (Alpha Arbutin) | Acticos",
+      "seoDescription": "getting dry and brittle. Alpha Arbutin is a functional ingredient for skin lightening. It helps in Skin whitening, Skin lightening and is Hydroquinone",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "beta-arbutin",
+      "code": "Beta-Arbutin",
+      "name": "Beta Arbutin",
+      "inci": "Beta Arbutin",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "extent. Skin whitening, dark spot fading, evens skin tone. Water soluble. Dosage: 1-7%",
+      "benefits": [
+        "extent.",
+        "Skin whitening, dark spot fading, evens skin tone.",
+        "Water soluble.",
+        "Dosage: 1-7%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "1-7%",
+        "Solubility": "Water soluble"
+      },
+      "seoTitle": "Beta Arbutin (Beta Arbutin) | Acticos",
+      "seoDescription": "extent. Skin whitening, dark spot fading, evens skin tone. Water soluble. Dosage: 1-7%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "vce",
+      "code": "VCE",
+      "name": "VCE",
+      "inci": "3-O-ethyl ascorbic acid",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "brightening",
+        "anti-aging"
+      ],
+      "description": "3-O-Ethyl Ascorbic Acid inhibits the activity of Tyrosinase, prevents the synthesis of Melanin, Promotes the synthesis of Collagen, improves the complexion and elasticity of skin, Strong anti-oxidation capacity can effectively scavenges free. Regulates immunity and resists inflammation. It helps in Hyperpigmentation, Anti-aging & Dark spots.",
+      "benefits": [
+        "3-O-Ethyl Ascorbic Acid inhibits the activity of Tyrosinase, prevents the synthesis of Melanin, Promotes the synthesis of Collagen, improves the complexion and elasticity of skin, Strong anti-oxidation capacity can effectively scavenges free.",
+        "Regulates immunity and resists inflammation.",
+        "It helps in Hyperpigmentation, Anti-aging & Dark spots."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "VCE (3-O-ethyl ascorbic acid) | Acticos",
+      "seoDescription": "3-O-Ethyl Ascorbic Acid inhibits the activity of Tyrosinase, prevents the synthesis of Melanin, Promotes the synthesis of Collagen, improves the compl",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "eaa",
+      "code": "EAA",
+      "name": "EAA",
+      "inci": "Ethyl Ascorbic Acid",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "Dark Spot Fading, Evens Skin Tone, Antioxidation. Water soluble, oil soluble. Dosage: 0.5 5%",
+      "benefits": [
+        "Dark Spot Fading, Evens Skin Tone, Antioxidation.",
+        "Water soluble, oil soluble.",
+        "Dosage: 0.5 5%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "0",
+        "Solubility": "Water soluble"
+      },
+      "seoTitle": "EAA (Ethyl Ascorbic Acid) | Acticos",
+      "seoDescription": "Dark Spot Fading, Evens Skin Tone, Antioxidation. Water soluble, oil soluble. Dosage: 0.5 5%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "pad",
+      "code": "PAD",
+      "name": "PAD",
+      "inci": "Potassium Azeloyl Diglycinate",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "brightening",
+        "anti-aging"
+      ],
+      "description": "A gentle, water-soluble brightening, anti-aging ingredients that controls sebum, evens skin tone, and improves skin clarity and elasticity.",
+      "benefits": [
+        "A gentle, water-soluble brightening, anti-aging ingredients that controls sebum, evens skin tone, and improves skin clarity and elasticity."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PAD (Potassium Azeloyl Diglycinate) | Acticos",
+      "seoDescription": "A gentle, water-soluble brightening, anti-aging ingredients that controls sebum, evens skin tone, and improves skin clarity and elasticity.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "po",
+      "code": "PO",
+      "name": "PO",
+      "inci": "Piroctone Olamine",
+      "category": "active-ingredients",
+      "applications": [
+        "hair-care",
+        "personal-care"
+      ],
+      "functions": [
+        "preservation",
+        "hair-scalp"
+      ],
+      "description": "A multifunctional anti-dandruff and antimicrobial agent that offers broad-spectrum protection, scalp soothing, and preservative benefits for personal care formulations.",
+      "benefits": [
+        "A multifunctional anti-dandruff and antimicrobial agent that offers broad-spectrum protection, scalp soothing, and preservative benefits for personal care formulations."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PO (Piroctone Olamine) | Acticos",
+      "seoDescription": "A multifunctional anti-dandruff and antimicrobial agent that offers broad-spectrum protection, scalp soothing, and preservative benefits for personal ",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ll",
+      "code": "LL",
+      "name": "LL",
+      "inci": "Lauroyl Lysine",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "An amino acid–derived ingredient known for its skin-conditioning, smooth texture, and enhanced spreadability, making it very versatile in cosmetic formulations",
+      "benefits": [
+        "An amino acid–derived ingredient known for its skin-conditioning, smooth texture, and enhanced spreadability, making it very versatile in cosmetic formulations"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "LL (Lauroyl Lysine) | Acticos",
+      "seoDescription": "An amino acid–derived ingredient known for its skin-conditioning, smooth texture, and enhanced spreadability, making it very versatile in cosmetic for",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "aa2g",
+      "code": "AA2G",
+      "name": "AA2G",
+      "inci": "Ascorbyl Glucoside",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "Dark Spot Fading, Evens Skin Tone, Antioxidation. Water soluble. Dosage: 0.5-5%",
+      "benefits": [
+        "Dark Spot Fading, Evens Skin Tone, Antioxidation.",
+        "Water soluble.",
+        "Dosage: 0.5-5%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "0",
+        "Solubility": "Water soluble"
+      },
+      "seoTitle": "AA2G (Ascorbyl Glucoside) | Acticos",
+      "seoDescription": "Dark Spot Fading, Evens Skin Tone, Antioxidation. Water soluble. Dosage: 0.5-5%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "sap",
+      "code": "SAP",
+      "name": "SAP",
+      "inci": "Sodium Ascorbyl Phosphate",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "Evens Skin Tone, Dark Spot Fading. Water soluble. Dosage: 0.2-3%",
+      "benefits": [
+        "Evens Skin Tone, Dark Spot Fading.",
+        "Water soluble.",
+        "Dosage: 0.2-3%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "0",
+        "Solubility": "Water soluble"
+      },
+      "seoTitle": "SAP (Sodium Ascorbyl Phosphate) | Acticos",
+      "seoDescription": "Evens Skin Tone, Dark Spot Fading. Water soluble. Dosage: 0.2-3%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "map",
+      "code": "MAP",
+      "name": "MAP",
+      "inci": "Magnesium Ascorbyl Phosphate",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "moisturization"
+      ],
+      "description": "Evens Skin Tone, Promotes Hydration. Water soluble. Dosage: 1-10%",
+      "benefits": [
+        "Evens Skin Tone, Promotes Hydration.",
+        "Water soluble.",
+        "Dosage: 1-10%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "1-10%",
+        "Solubility": "Water soluble"
+      },
+      "seoTitle": "MAP (Magnesium Ascorbyl Phosphate) | Acticos",
+      "seoDescription": "Evens Skin Tone, Promotes Hydration. Water soluble. Dosage: 1-10%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ap",
+      "code": "AP",
+      "name": "AP",
+      "inci": "Ascorbyl Palmitate",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "Evens Skin Tone, Dark Spot Fading. Oil soluble. Dosage: 0.2-3%",
+      "benefits": [
+        "Evens Skin Tone, Dark Spot Fading.",
+        "Oil soluble.",
+        "Dosage: 0.2-3%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "0",
+        "Solubility": "Oil soluble"
+      },
+      "seoTitle": "AP (Ascorbyl Palmitate) | Acticos",
+      "seoDescription": "Evens Skin Tone, Dark Spot Fading. Oil soluble. Dosage: 0.2-3%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "gla",
+      "code": "GLA",
+      "name": "GLA",
+      "inci": "Glabridin",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "Plant Extracts, Anti-inflammation, Skin-whitening. Soluble in Butylene Glycol or Ethanol. Dosage: 0.02-1%",
+      "benefits": [
+        "Plant Extracts, Anti-inflammation, Skin-whitening.",
+        "Soluble in Butylene Glycol or Ethanol.",
+        "Dosage: 0.02-1%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "0",
+        "Solubility": "Soluble in Butylene Glycol or Ethanol"
+      },
+      "seoTitle": "GLA (Glabridin) | Acticos",
+      "seoDescription": "Plant Extracts, Anti-inflammation, Skin-whitening. Soluble in Butylene Glycol or Ethanol. Dosage: 0.02-1%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ta",
+      "code": "TA",
+      "name": "TA",
+      "inci": "Tranexamic Acid",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "Dark Spot Fading, Evens Skin Tone. Water soluble. Dosage: 1-5%",
+      "benefits": [
+        "Dark Spot Fading, Evens Skin Tone.",
+        "Water soluble.",
+        "Dosage: 1-5%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "1-5%",
+        "Solubility": "Water soluble"
+      },
+      "seoTitle": "TA (Tranexamic Acid) | Acticos",
+      "seoDescription": "Dark Spot Fading, Evens Skin Tone. Water soluble. Dosage: 1-5%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ga",
+      "code": "GA",
+      "name": "GA",
+      "inci": "Glycolic Acid",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "moisturization"
+      ],
+      "description": "Accelerating skin cell turnover, smoothing bumpy skin, promoting skin’s hydration. Soluble in water. Dosage: 1-5%",
+      "benefits": [
+        "Accelerating skin cell turnover, smoothing bumpy skin, promoting skin’s hydration.",
+        "Soluble in water.",
+        "Dosage: 1-5%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "1-5%",
+        "Solubility": "Soluble in water"
+      },
+      "seoTitle": "GA (Glycolic Acid) | Acticos",
+      "seoDescription": "Accelerating skin cell turnover, smoothing bumpy skin, promoting skin’s hydration. Soluble in water. Dosage: 1-5%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "dl-ma",
+      "code": "DL-MA",
+      "name": "DL-MA",
+      "inci": "DL-Mandelic acid",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [],
+      "description": "The gentlest alpha hydroxy acid, friendlier for sensitive skin than glycolic acid. Soluble in water. Dosage: 3-5%",
+      "benefits": [
+        "The gentlest alpha hydroxy acid, friendlier for sensitive skin than glycolic acid.",
+        "Soluble in water.",
+        "Dosage: 3-5%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "3-5%",
+        "Solubility": "Soluble in water"
+      },
+      "seoTitle": "DL-MA (DL-Mandelic acid) | Acticos",
+      "seoDescription": "The gentlest alpha hydroxy acid, friendlier for sensitive skin than glycolic acid. Soluble in water. Dosage: 3-5%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "aze",
+      "code": "AZE",
+      "name": "AZE",
+      "inci": "Azelaic acid",
+      "category": "active-ingredients",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [],
+      "description": "Anti-Acne, improving sensitivity-induced redness, diminishing post-acne marks, gentle exfoliating. Soluble in organic solvents. Dosage: 5-10%",
+      "benefits": [
+        "Anti-Acne, improving sensitivity-induced redness, diminishing post-acne marks, gentle exfoliating.",
+        "Soluble in organic solvents.",
+        "Dosage: 5-10%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "5-10%",
+        "Solubility": "Soluble in organic solvents"
+      },
+      "seoTitle": "AZE (Azelaic acid) | Acticos",
+      "seoDescription": "Anti-Acne, improving sensitivity-induced redness, diminishing post-acne marks, gentle exfoliating. Soluble in organic solvents. Dosage: 5-10%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ka",
+      "code": "KA",
+      "name": "KA",
+      "inci": "Kojic Acid",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "Skin-whitening. Water soluble. Dosage: 0.1-2%",
+      "benefits": [
+        "Skin-whitening.",
+        "Water soluble.",
+        "Dosage: 0.1-2%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "0",
+        "Solubility": "Water soluble"
+      },
+      "seoTitle": "KA (Kojic Acid) | Acticos",
+      "seoDescription": "Skin-whitening. Water soluble. Dosage: 0.1-2%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "kad",
+      "code": "KAD",
+      "name": "KAD",
+      "inci": "Kojic Acid Dipalmitate",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "Skin-whitening. Oil soluble. Dosage: 1-5%",
+      "benefits": [
+        "Skin-whitening.",
+        "Oil soluble.",
+        "Dosage: 1-5%"
+      ],
+      "technicalInfo": {
+        "Recommended Usage": "1-5%",
+        "Solubility": "Oil soluble"
+      },
+      "seoTitle": "KAD (Kojic Acid Dipalmitate) | Acticos",
+      "seoDescription": "Skin-whitening. Oil soluble. Dosage: 1-5%",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "csa",
+      "code": "CSA",
+      "name": "CSA",
+      "inci": "Capryloyl Salicylic Acid",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "preservation"
+      ],
+      "description": "A gentle, oil-soluble exfoliant that deeply clears pores, smooths skin, and fights acne with anti-inflammatory and antimicrobial action.",
+      "benefits": [
+        "A gentle, oil-soluble exfoliant that deeply clears pores, smooths skin, and fights acne with anti-inflammatory and antimicrobial action."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "CSA (Capryloyl Salicylic Acid) | Acticos",
+      "seoDescription": "A gentle, oil-soluble exfoliant that deeply clears pores, smooths skin, and fights acne with anti-inflammatory and antimicrobial action.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "dphp",
+      "code": "DPHP",
+      "name": "DPHP",
+      "inci": "Dipalmitoyl Hydroxyproline",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "anti-aging"
+      ],
+      "description": "An oil-soluble collagen-boosting peptide that penetrates skin and lips to reduce wrinkles, support firmness, and protect against collagen-degrading enzymes.",
+      "benefits": [
+        "An oil-soluble collagen-boosting peptide that penetrates skin and lips to reduce wrinkles, support firmness, and protect against collagen-degrading enzymes."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DPHP (Dipalmitoyl Hydroxyproline) | Acticos",
+      "seoDescription": "An oil-soluble collagen-boosting peptide that penetrates skin and lips to reduce wrinkles, support firmness, and protect against collagen-degrading en",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "upa",
+      "code": "UPA",
+      "name": "UPA",
+      "inci": "Undecylenoyl Phenylalanine",
+      "category": "active-ingredients",
+      "applications": [
+        "skin-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "brightening"
+      ],
+      "description": "An amino acid–lipid complex that inhibits melanotropin to e ectively reduce melanin production, making it ideal for skin-brightening and anti-pigmentation formulations",
+      "benefits": [
+        "An amino acid–lipid complex that inhibits melanotropin to e ectively reduce melanin production, making it ideal for skin-brightening and anti-pigmentation formulations"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "UPA (Undecylenoyl Phenylalanine) | Acticos",
+      "seoDescription": "An amino acid–lipid complex that inhibits melanotropin to e ectively reduce melanin production, making it ideal for skin-brightening and anti-pigmenta",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "dmi",
+      "code": "DMI",
+      "name": "DMI",
+      "inci": "Dimethyl Isosorbide",
+      "category": "emmolient-esters",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "A naturally derived emollient that acts as a carrier and penetration enhancer by improving the delivery of actives. It also offers excellent solubilizing properties.",
+      "benefits": [
+        "A naturally derived emollient that acts as a carrier and penetration enhancer by improving the delivery of actives.",
+        "It also offers excellent solubilizing properties."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DMI (Dimethyl Isosorbide) | Acticos",
+      "seoDescription": "A naturally derived emollient that acts as a carrier and penetration enhancer by improving the delivery of actives. It also offers excellent solubiliz",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ial",
+      "code": "IAL",
+      "name": "IAL",
+      "inci": "Isoamyl Laurate",
+      "category": "emmolient-esters",
+      "applications": [
+        "sun-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "sun-care",
+        "texture-sensory"
+      ],
+      "description": "A high purity naturally derived, fast-spreading ingredient that offers a non-greasy feel and sustainable silicone-free performance. It has good pigment wetting ability and UV filter solubility. It is also a suitable alternative to D5 silicones.",
+      "benefits": [
+        "A high purity naturally derived, fast-spreading ingredient that offers a non-greasy feel and sustainable silicone-free performance.",
+        "It has good pigment wetting ability and UV filter solubility.",
+        "It is also a suitable alternative to D5 silicones."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "IAL (Isoamyl Laurate) | Acticos",
+      "seoDescription": "A high purity naturally derived, fast-spreading ingredient that offers a non-greasy feel and sustainable silicone-free performance. It has good pigmen",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "inin",
+      "code": "ININ",
+      "name": "ININ",
+      "inci": "Isononyl Isononanoate",
+      "category": "emmolient-esters",
+      "applications": [
+        "sun-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "sun-care",
+        "texture-sensory"
+      ],
+      "description": "A fast-absorbing, silky emollient that enhances color payo, reduces white cast in sunscreen formulations. It is an ideal replacement to volatile silicone.",
+      "benefits": [
+        "A fast-absorbing, silky emollient that enhances color payo, reduces white cast in sunscreen formulations.",
+        "It is an ideal replacement to volatile silicone."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "ININ (Isononyl Isononanoate) | Acticos",
+      "seoDescription": "A fast-absorbing, silky emollient that enhances color payo, reduces white cast in sunscreen formulations. It is an ideal replacement to volatile silic",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cin",
+      "code": "CIN",
+      "name": "CIN",
+      "inci": "Cetearyl Isononanoate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "A high-purity, naturally derived emollient with fast absorption and a light, non-greasy skin feel.",
+      "benefits": [
+        "A high-purity, naturally derived emollient with fast absorption and a light, non-greasy skin feel."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "CIN (Cetearyl Isononanoate) | Acticos",
+      "seoDescription": "A high-purity, naturally derived emollient with fast absorption and a light, non-greasy skin feel.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "c1215-ab",
+      "code": "C1215-AB",
+      "name": "C1215-AB",
+      "inci": "C12-15 Alkyl Benzoate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "hair-care",
+        "personal-care",
+        "sun-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "preservation",
+        "hair-scalp",
+        "sun-care",
+        "texture-sensory"
+      ],
+      "description": "Emollient & Texture Enhancer,Dispersing Agent & Solvent,Antimicrobial Booster. Used in Suncare, Skincare, Colour cosmetics,haircare and overall personal care",
+      "benefits": [
+        "Emollient & Texture Enhancer,Dispersing Agent & Solvent,Antimicrobial Booster.",
+        "Used in Suncare, Skincare, Colour cosmetics,haircare and overall personal care"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "C1215-AB (C12-15 Alkyl Benzoate) | Acticos",
+      "seoDescription": "Emollient & Texture Enhancer,Dispersing Agent & Solvent,Antimicrobial Booster. Used in Suncare, Skincare, Colour cosmetics,haircare and overall person",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "mym",
+      "code": "MYM",
+      "name": "MYM",
+      "inci": "Myristyl Myristate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "hair-care",
+        "baby-care"
+      ],
+      "functions": [
+        "hair-scalp",
+        "texture-sensory"
+      ],
+      "description": "Emollients, Skin Conditioning agents, used in Baby Care, Hair Care & Lotions.",
+      "benefits": [
+        "Emollients, Skin Conditioning agents, used in Baby Care, Hair Care & Lotions."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "MYM (Myristyl Myristate) | Acticos",
+      "seoDescription": "Emollients, Skin Conditioning agents, used in Baby Care, Hair Care & Lotions.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cop",
+      "code": "COP",
+      "name": "COP",
+      "inci": "Cetyl / Octyl Palmitate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "hair-care",
+        "baby-care"
+      ],
+      "functions": [
+        "hair-scalp",
+        "texture-sensory"
+      ],
+      "description": "Emollients, Skin Conditioning agents, used in Baby Care, Hair Care & Lotions.",
+      "benefits": [
+        "Emollients, Skin Conditioning agents, used in Baby Care, Hair Care & Lotions."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "COP (Cetyl / Octyl Palmitate) | Acticos",
+      "seoDescription": "Emollients, Skin Conditioning agents, used in Baby Care, Hair Care & Lotions.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cctg",
+      "code": "CCTG",
+      "name": "CCTG",
+      "inci": "Caprylic /Capric Triglyceride",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "hair-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "hair-scalp",
+        "texture-sensory"
+      ],
+      "description": "Emollient used in Acne Treatments, Antiperspirants, Color Cosmetics, Hair Care & Skin Care.",
+      "benefits": [
+        "Emollient used in Acne Treatments, Antiperspirants, Color Cosmetics, Hair Care & Skin Care."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "CCTG (Caprylic /Capric Triglyceride) | Acticos",
+      "seoDescription": "Emollient used in Acne Treatments, Antiperspirants, Color Cosmetics, Hair Care & Skin Care.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "hl",
+      "code": "HL",
+      "name": "HL",
+      "inci": "Hexyl Laurate",
+      "category": "emmolient-esters",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "A naturally derived, high-spreading silicone alternative that offers a non-greasy feel and sustainable silicone-free performance.",
+      "benefits": [
+        "A naturally derived, high-spreading silicone alternative that offers a non-greasy feel and sustainable silicone-free performance."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "HL (Hexyl Laurate) | Acticos",
+      "seoDescription": "A naturally derived, high-spreading silicone alternative that offers a non-greasy feel and sustainable silicone-free performance.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "db",
+      "code": "DB",
+      "name": "DB",
+      "inci": "Dibutyl Adipate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "sun-care"
+      ],
+      "functions": [
+        "sun-care",
+        "texture-sensory"
+      ],
+      "description": "A lightweight liquid ester that boosts spreadability, and delivers a silky, non-greasy skin feel. It has a very good performance in solubilizing crystalline UV filters.",
+      "benefits": [
+        "A lightweight liquid ester that boosts spreadability, and delivers a silky, non-greasy skin feel.",
+        "It has a very good performance in solubilizing crystalline UV filters."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DB (Dibutyl Adipate) | Acticos",
+      "seoDescription": "A lightweight liquid ester that boosts spreadability, and delivers a silky, non-greasy skin feel. It has a very good performance in solubilizing cryst",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "dipa",
+      "code": "DIPA",
+      "name": "DIPA",
+      "inci": "Diisopropyl Adipate",
+      "category": "emmolient-esters",
+      "applications": [
+        "sun-care"
+      ],
+      "functions": [
+        "sun-care",
+        "texture-sensory"
+      ],
+      "description": "A lightweight, fast-absorbing emollient that leaves a soft, non-greasy feel, ideal for sun and after-sun care.",
+      "benefits": [
+        "A lightweight, fast-absorbing emollient that leaves a soft, non-greasy feel, ideal for sun and after-sun care."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DIPA (Diisopropyl Adipate) | Acticos",
+      "seoDescription": "A lightweight, fast-absorbing emollient that leaves a soft, non-greasy feel, ideal for sun and after-sun care.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "hpu",
+      "code": "HPU",
+      "name": "HPU",
+      "inci": "Heptyl Undecylenate",
+      "category": "emmolient-esters",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "A 100% plant-based, ultra-light emollient that provides a dry, non-greasy silicone-free feel.",
+      "benefits": [
+        "A 100% plant-based, ultra-light emollient that provides a dry, non-greasy silicone-free feel."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "HPU (Heptyl Undecylenate) | Acticos",
+      "seoDescription": "A 100% plant-based, ultra-light emollient that provides a dry, non-greasy silicone-free feel.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ehin",
+      "code": "EHIN",
+      "name": "EHIN",
+      "inci": "Ethylhexyl Isononanoate",
+      "category": "emmolient-esters",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "A low-viscosity emollient that softens texture, reduces tackiness, and delivers a drier, softer, non-greasy feel.",
+      "benefits": [
+        "A low-viscosity emollient that softens texture, reduces tackiness, and delivers a drier, softer, non-greasy feel."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "EHIN (Ethylhexyl Isononanoate) | Acticos",
+      "seoDescription": "A low-viscosity emollient that softens texture, reduces tackiness, and delivers a drier, softer, non-greasy feel.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "id",
+      "code": "ID",
+      "name": "ID",
+      "inci": "Isosorbide Dicaprylate",
+      "category": "emmolient-esters",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "moisturization",
+        "texture-sensory"
+      ],
+      "description": "An oil-loving hydrator and barrier builder molecule which reduces fine lines, and blends well with hydrophobic emollients.",
+      "benefits": [
+        "An oil-loving hydrator and barrier builder molecule which reduces fine lines, and blends well with hydrophobic emollients."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "ID (Isosorbide Dicaprylate) | Acticos",
+      "seoDescription": "An oil-loving hydrator and barrier builder molecule which reduces fine lines, and blends well with hydrophobic emollients.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "pdcc",
+      "code": "PDCC",
+      "name": "PDCC",
+      "inci": "Propanediol Dicaprylate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "sun-care"
+      ],
+      "functions": [
+        "sun-care",
+        "texture-sensory"
+      ],
+      "description": "A plant-based, silicone-like emollient that delivers a smooth, silky feel and enhances UV filter spreadability in skincare and sun care. It helps in reducing stickiness in various formulations",
+      "benefits": [
+        "A plant-based, silicone-like emollient that delivers a smooth, silky feel and enhances UV filter spreadability in skincare and sun care.",
+        "It helps in reducing stickiness in various formulations"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PDCC (Propanediol Dicaprylate) | Acticos",
+      "seoDescription": "A plant-based, silicone-like emollient that delivers a smooth, silky feel and enhances UV filter spreadability in skincare and sun care. It helps in r",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "pdcc-60",
+      "code": "PDCC-60",
+      "name": "PDCC",
+      "inci": "Propanediol, Dicaprylate/ Caprate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "A vegetable-derived ester with dry, silky emollient and cleansing properties for skincare and makeup.",
+      "benefits": [
+        "A vegetable-derived ester with dry, silky emollient and cleansing properties for skincare and makeup."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PDCC (Propanediol, Dicaprylate/ Caprate) | Acticos",
+      "seoDescription": "A vegetable-derived ester with dry, silky emollient and cleansing properties for skincare and makeup.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "pgdc",
+      "code": "PGDC",
+      "name": "PGDC",
+      "inci": "Propylene glycol, Dicaprylate/ Dicaprate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "sun-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "sun-care",
+        "texture-sensory"
+      ],
+      "description": "A lightweight, non-greasy multifunctional emollient ideal for skincare, sun care, makeup, and sensitive skin.",
+      "benefits": [
+        "A lightweight, non-greasy multifunctional emollient ideal for skincare, sun care, makeup, and sensitive skin."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PGDC (Propylene glycol, Dicaprylate/ Dicaprate) | Acticos",
+      "seoDescription": "A lightweight, non-greasy multifunctional emollient ideal for skincare, sun care, makeup, and sensitive skin.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "phc",
+      "code": "PHC",
+      "name": "PHC",
+      "inci": "Propylheptyl Caprylate",
+      "category": "emmolient-esters",
+      "applications": [
+        "color-cosmetics"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "A smooth, non-greasy, eco-friendly emollient that enhances pigment spread and texture in makeup. It is having unique sensory of multi dimensional softness and good performance in wetting agents.",
+      "benefits": [
+        "A smooth, non-greasy, eco-friendly emollient that enhances pigment spread and texture in makeup.",
+        "It is having unique sensory of multi dimensional softness and good performance in wetting agents."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PHC (Propylheptyl Caprylate) | Acticos",
+      "seoDescription": "A smooth, non-greasy, eco-friendly emollient that enhances pigment spread and texture in makeup. It is having unique sensory of multi dimensional soft",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "dnpg",
+      "code": "DNPG",
+      "name": "DNPG",
+      "inci": "Neopentyl Glycol Diheptanoate",
+      "category": "emmolient-esters",
+      "applications": [
+        "sun-care"
+      ],
+      "functions": [
+        "sun-care",
+        "texture-sensory"
+      ],
+      "description": "A light, silky emollient that stabilizes formulations and ensures even UV filter dispersion. It also acts as a texture enhancer along with having great solubilizing properties",
+      "benefits": [
+        "A light, silky emollient that stabilizes formulations and ensures even UV filter dispersion.",
+        "It also acts as a texture enhancer along with having great solubilizing properties"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DNPG (Neopentyl Glycol Diheptanoate) | Acticos",
+      "seoDescription": "A light, silky emollient that stabilizes formulations and ensures even UV filter dispersion. It also acts as a texture enhancer along with having grea",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "dcc",
+      "code": "DCC",
+      "name": "DCC",
+      "inci": "Dicaprylyl Carbonate",
+      "category": "emmolient-esters",
+      "applications": [
+        "personal-care",
+        "sun-care"
+      ],
+      "functions": [
+        "sun-care",
+        "texture-sensory"
+      ],
+      "description": "A multifunctional dry, velvety emollient that solubilizes UV filters, good perfume and propellant solubility and good pH stability thus suitable for liquid AP/Deo systems.",
+      "benefits": [
+        "A multifunctional dry, velvety emollient that solubilizes UV filters, good perfume and propellant solubility and good pH stability thus suitable for liquid AP/Deo systems."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DCC (Dicaprylyl Carbonate) | Acticos",
+      "seoDescription": "A multifunctional dry, velvety emollient that solubilizes UV filters, good perfume and propellant solubility and good pH stability thus suitable for l",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "dis",
+      "code": "DIS",
+      "name": "DIS",
+      "inci": "Diisopropyl Sebacate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "hair-care"
+      ],
+      "functions": [
+        "hair-scalp",
+        "texture-sensory"
+      ],
+      "description": "A lightweight, non-greasy, biodegradable emollient that improves spreadability and texture in skincare and haircare.",
+      "benefits": [
+        "A lightweight, non-greasy, biodegradable emollient that improves spreadability and texture in skincare and haircare."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DIS (Diisopropyl Sebacate) | Acticos",
+      "seoDescription": "A lightweight, non-greasy, biodegradable emollient that improves spreadability and texture in skincare and haircare.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ehp",
+      "code": "EHP",
+      "name": "EHP",
+      "inci": "Ethylhexyl Pelargonate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "A high-quality ester that disperses pigments, enhances gloss, and delivers a soft, non-oily skin feel in color cosmetics.",
+      "benefits": [
+        "A high-quality ester that disperses pigments, enhances gloss, and delivers a soft, non-oily skin feel in color cosmetics."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "EHP (Ethylhexyl Pelargonate) | Acticos",
+      "seoDescription": "A high-quality ester that disperses pigments, enhances gloss, and delivers a soft, non-oily skin feel in color cosmetics.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "dehc",
+      "code": "DEHC",
+      "name": "DEHC",
+      "inci": "Diethyl hexyl Carbonate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care",
+        "sun-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "sun-care",
+        "texture-sensory"
+      ],
+      "description": "A lightweight, fast-spreading emollient and solvent offering a dry, silky skin feel, excellent spreadability, and low residue, with good UV filter and pigment solubility.",
+      "benefits": [
+        "A lightweight, fast-spreading emollient and solvent offering a dry, silky skin feel, excellent spreadability, and low residue, with good UV filter and pigment solubility."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DEHC (Diethyl hexyl Carbonate) | Acticos",
+      "seoDescription": "A lightweight, fast-spreading emollient and solvent offering a dry, silky skin feel, excellent spreadability, and low residue, with good UV filter and",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "gth",
+      "code": "GTH",
+      "name": "GTH",
+      "inci": "Triheptanoin",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "A naturally derived, palm-free emollient offering excellent spreading, solvency, and dispersing properties, with an elegant, non-greasy skin feel.",
+      "benefits": [
+        "A naturally derived, palm-free emollient offering excellent spreading, solvency, and dispersing properties, with an elegant, non-greasy skin feel."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "GTH (Triheptanoin) | Acticos",
+      "seoDescription": "A naturally derived, palm-free emollient offering excellent spreading, solvency, and dispersing properties, with an elegant, non-greasy skin feel.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ipp",
+      "code": "IPP",
+      "name": "IPP",
+      "inci": "Isopropyl Palmitate",
+      "category": "emmolient-esters",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "Pharmaceutical and Cosmetic Solvents and Emollients.",
+      "benefits": [
+        "Pharmaceutical and Cosmetic Solvents and Emollients."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "IPP (Isopropyl Palmitate) | Acticos",
+      "seoDescription": "Pharmaceutical and Cosmetic Solvents and Emollients.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ipm",
+      "code": "IPM",
+      "name": "IPM",
+      "inci": "Isopropyl Myristate",
+      "category": "emmolient-esters",
+      "applications": [
+        "personal-care"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "Pharmaceutical and Cosmetic Solvents and Emollients.",
+      "benefits": [
+        "Pharmaceutical and Cosmetic Solvents and Emollients."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "IPM (Isopropyl Myristate) | Acticos",
+      "seoDescription": "Pharmaceutical and Cosmetic Solvents and Emollients.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "sodium-pca",
+      "code": "Sodium-PCA",
+      "name": "Sodium PCA",
+      "inci": "Sodium L-pyroglutamate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "moisturization"
+      ],
+      "description": "Moisturising agents used in Creams and Lotions.",
+      "benefits": [
+        "Moisturising agents used in Creams and Lotions."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "Sodium PCA (Sodium L-pyroglutamate) | Acticos",
+      "seoDescription": "Moisturising agents used in Creams and Lotions.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "potassium-pca",
+      "code": "Potassium-PCA",
+      "name": "Potassium PCA",
+      "inci": "Potassium L-pyroglutamate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "moisturization"
+      ],
+      "description": "Moisturising agents used in Creams and Lotions.",
+      "benefits": [
+        "Moisturising agents used in Creams and Lotions."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "Potassium PCA (Potassium L-pyroglutamate) | Acticos",
+      "seoDescription": "Moisturising agents used in Creams and Lotions.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "lauryl-pca",
+      "code": "Lauryl-PCA",
+      "name": "Lauryl PCA",
+      "inci": "Lauryl L-pyroglutamate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "moisturization"
+      ],
+      "description": "Moisturising agents used in Creams and Lotions.",
+      "benefits": [
+        "Moisturising agents used in Creams and Lotions."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "Lauryl PCA (Lauryl L-pyroglutamate) | Acticos",
+      "seoDescription": "Moisturising agents used in Creams and Lotions.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "ceh",
+      "code": "CEH",
+      "name": "CEH",
+      "inci": "Cetyl Ethylhexanoate",
+      "category": "emmolient-esters",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "texture-sensory"
+      ],
+      "description": "A high-performance, low-viscosity emollient offering excellent spreadability, skin permeability, and optical clarity, with a smooth, lightweight, non-greasy skin feel.",
+      "benefits": [
+        "A high-performance, low-viscosity emollient offering excellent spreadability, skin permeability, and optical clarity, with a smooth, lightweight, non-greasy skin feel."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "CEH (Cetyl Ethylhexanoate) | Acticos",
+      "seoDescription": "A high-performance, low-viscosity emollient offering excellent spreadability, skin permeability, and optical clarity, with a smooth, lightweight, non-",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "chronoshen-kpdens-n",
+      "code": "ChronoShen-Kpdens-N",
+      "name": "ChronoShen® Kpdens N",
+      "inci": "Water, Butylene Glycol, PPG-26-Buteth-26, PEG-40 Hydrogenated Castor Oil, Ginsenosides, Tetrahydroxymethyl Pyrimidine Carboxylic Acid, Tripeptide-1 Copper, Palmitoyl Tetrapeptide-7, Caprylyl Glycol, 1,2-Hexanediol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "hair-care"
+      ],
+      "functions": [
+        "moisturization",
+        "hair-scalp"
+      ],
+      "description": "Efficient hair care active which activates scalp microcirculation, improves hair loss, strengthens hair roots, reinforces scalp barrier function, and promotes hair growth. It acts as a DHT blocker. Studies available - 28 days & 84 days.",
+      "benefits": [
+        "Efficient hair care active which activates scalp microcirculation, improves hair loss, strengthens hair roots, reinforces scalp barrier function, and promotes hair growth.",
+        "It acts as a DHT blocker.",
+        "Studies available - 28 days & 84 days."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "ChronoShen® Kpdens N (Water, Butylene Glycol, PPG-26-Buteth-26, PEG-40 Hydrogenated Castor Oil, Ginsenosides, Tetrahydroxymethyl Pyrimidine Carboxylic Acid, Tripeptide-1 Copper, Palmitoyl Tetrapeptide-7, Caprylyl Glycol, 1,2-Hexanediol) | Acticos",
+      "seoDescription": "Efficient hair care active which activates scalp microcirculation, improves hair loss, strengthens hair roots, reinforces scalp barrier function, and ",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cbiomey-bio-scalm-complex-pro",
+      "code": "cBioMey-Bio-Scalm-Complex-Pro",
+      "name": "cBioMey® Bio Scalm Complex Pro",
+      "inci": "Hexanediol Water, Glycerine, Butylene Glycol, Thuja orientalis leaf extract, Ginsenosides, Dihydroxypropyl Arginine hydrochloride, Benzyl alcohol, potassium sorbate,",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "hair-care"
+      ],
+      "functions": [
+        "moisturization",
+        "hair-scalp"
+      ],
+      "description": "Anti bacterial, Oil control, long lasting moisturizing, balance microbial environment & reduces dandruff. It Inhibits the production of DHT. Studies available for above claims.",
+      "benefits": [
+        "Anti bacterial, Oil control, long lasting moisturizing, balance microbial environment & reduces dandruff.",
+        "It Inhibits the production of DHT.",
+        "Studies available for above claims."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "cBioMey® Bio Scalm Complex Pro (Hexanediol Water, Glycerine, Butylene Glycol, Thuja orientalis leaf extract, Ginsenosides, Dihydroxypropyl Arginine hydrochloride, Benzyl alcohol, potassium sorbate,) | Acticos",
+      "seoDescription": "Anti bacterial, Oil control, long lasting moisturizing, balance microbial environment & reduces dandruff. It Inhibits the production of DHT. Studies a",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cbiomey-thuja-extract",
+      "code": "cBioMey-Thuja-Extract",
+      "name": "cBioMey® Thuja Extract",
+      "inci": "sodium benzoate. Water, Butylene Glycol, Thuja Orientalis Leaf Extract, Phenoxyethanol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "hair-care"
+      ],
+      "functions": [
+        "hair-scalp"
+      ],
+      "description": "Promotes scalp microcirculation, Reduces Dandruff and prevents hair loss.",
+      "benefits": [
+        "Promotes scalp microcirculation, Reduces Dandruff and prevents hair loss."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "cBioMey® Thuja Extract (sodium benzoate. Water, Butylene Glycol, Thuja Orientalis Leaf Extract, Phenoxyethanol) | Acticos",
+      "seoDescription": "Promotes scalp microcirculation, Reduces Dandruff and prevents hair loss.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cbiomey-aqualock-s30",
+      "code": "cBioMey-AquaLock-S30",
+      "name": "cBioMey® AquaLock S30",
+      "inci": "Water, Dihydroxypropyl arginine hydrochloride, 1,2-pentanediol, 1,2- hexanediol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "hair-care"
+      ],
+      "functions": [
+        "moisturization",
+        "hair-scalp"
+      ],
+      "description": "Super long-lasting moisturizing agent, A Star product in Skin & hair care having superior haircare benefits. Long lasting moisturizing & regulates skin microecology. It helps regulating the skin microbiome, improves skin smoothness. It provides Dual magnetic attraction mechanism & offers super",
+      "benefits": [
+        "Super long-lasting moisturizing agent, A Star product in Skin & hair care having superior haircare benefits.",
+        "Long lasting moisturizing & regulates skin microecology.",
+        "It helps regulating the skin microbiome, improves skin smoothness.",
+        "It provides Dual magnetic attraction mechanism & offers super"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "cBioMey® AquaLock S30 (Water, Dihydroxypropyl arginine hydrochloride, 1,2-pentanediol, 1,2- hexanediol) | Acticos",
+      "seoDescription": "Super long-lasting moisturizing agent, A Star product in Skin & hair care having superior haircare benefits. Long lasting moisturizing & regulates ski",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cbiomey-ar-s30",
+      "code": "cBioMey-AR-S30",
+      "name": "cBioMey® AR S30",
+      "inci": "Water, Dihydroxypropyl Arginine HCL, Phenoxyethanol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "hair-care"
+      ],
+      "functions": [
+        "moisturization",
+        "anti-aging",
+        "hair-scalp"
+      ],
+      "description": "skin shield. Promotes hair smoothening, High moisturizing power, Improves wrinkles and pores. Reduces Dandruff and prevents hair loss. A",
+      "benefits": [
+        "skin shield.",
+        "Promotes hair smoothening, High moisturizing power, Improves wrinkles and pores.",
+        "Reduces Dandruff and prevents hair loss.",
+        "A"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "cBioMey® AR S30 (Water, Dihydroxypropyl Arginine HCL, Phenoxyethanol) | Acticos",
+      "seoDescription": "skin shield. Promotes hair smoothening, High moisturizing power, Improves wrinkles and pores. Reduces Dandruff and prevents hair loss. A",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cbiomey-maglock-s30",
+      "code": "cBioMey-MagLock-S30",
+      "name": "cBioMey® MagLock S30",
+      "inci": "Water, Dihydroxypropyl arginine hydrochloride, 1,2-pentanediol, 1,2- hexanediol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "hair-care"
+      ],
+      "functions": [
+        "moisturization",
+        "hair-scalp"
+      ],
+      "description": "Star product in Skin care having superior haircare benefits. Long lasting moisturizing & regulates skin microecology. It helps regulating the skin microbiome, improves skin smoothness. It provides Dual",
+      "benefits": [
+        "Star product in Skin care having superior haircare benefits.",
+        "Long lasting moisturizing & regulates skin microecology.",
+        "It helps regulating the skin microbiome, improves skin smoothness.",
+        "It provides Dual"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "cBioMey® MagLock S30 (Water, Dihydroxypropyl arginine hydrochloride, 1,2-pentanediol, 1,2- hexanediol) | Acticos",
+      "seoDescription": "Star product in Skin care having superior haircare benefits. Long lasting moisturizing & regulates skin microecology. It helps regulating the skin mic",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "cbiomey-cacushen-pro",
+      "code": "cBioMey-CacuShen-Pro",
+      "name": "cBioMey® CacuShen Pro",
+      "inci": "Water, Butylene Glycol, Thuja Orientalis Leaf Extract, Ginsenosides, Caprylyl Glycol, 1,2-Hexanediol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "hair-care"
+      ],
+      "functions": [
+        "hair-scalp"
+      ],
+      "description": "magnetic attraction mechanism & offers super skin shield. Improves hair loss, Strengthens hair roots, Revitalizes scalp, Improves scalp micro-ecological environment, Synergistically promotes hair growth",
+      "benefits": [
+        "magnetic attraction mechanism & offers super skin shield.",
+        "Improves hair loss, Strengthens hair roots, Revitalizes scalp, Improves scalp micro-ecological environment, Synergistically promotes hair growth"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "cBioMey® CacuShen Pro (Water, Butylene Glycol, Thuja Orientalis Leaf Extract, Ginsenosides, Caprylyl Glycol, 1,2-Hexanediol) | Acticos",
+      "seoDescription": "magnetic attraction mechanism & offers super skin shield. Improves hair loss, Strengthens hair roots, Revitalizes scalp, Improves scalp micro-ecologic",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "aquaxyil",
+      "code": "AQUAXYIL",
+      "name": "AQUAXYIL",
+      "inci": "Xylitol (and) Glucose (and) Anhydroxylitol (and) Phoenix Dactylifera extract",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "personal-care"
+      ],
+      "functions": [
+        "moisturization",
+        "texture-sensory"
+      ],
+      "description": "CHEM-AQUAXYIL provides moisturization protection and sensory benefits in skincare, toiletries & make up sectors. It significantly decreases the visual direction score 2H, 4H, 8H and 24H and increase the skin moisturization during 6H after single application. It also has the ability of unhydroxyxylitol which helps keep the skin free from dryness and helps it hydrate and moisturize.",
+      "benefits": [
+        "CHEM-AQUAXYIL provides moisturization protection and sensory benefits in skincare, toiletries & make up sectors.",
+        "It significantly decreases the visual direction score 2H, 4H, 8H and 24H and increase the skin moisturization during 6H after single application.",
+        "It also has the ability of unhydroxyxylitol which helps keep the skin free from dryness and helps it hydrate and moisturize."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "AQUAXYIL (Xylitol (and) Glucose (and) Anhydroxylitol (and) Phoenix Dactylifera extract) | Acticos",
+      "seoDescription": "CHEM-AQUAXYIL provides moisturization protection and sensory benefits in skincare, toiletries & make up sectors. It significantly decreases the visual",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "retinol",
+      "code": "RETINOL",
+      "name": "RETINOL",
+      "inci": "Retinol, Glycerin, Polysorbate 80, Propanediol Camellia Sinensis Leaf Extract, Sclerotium gum, xanthun Gum, hyaluronic acid & water",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "hair-care"
+      ],
+      "functions": [
+        "moisturization",
+        "anti-aging",
+        "hair-scalp"
+      ],
+      "description": "Essential for Skin and scalp hydration. Equivalent to Seppic AQUAXYL Stabilized Retinol against heat & light with niosome technology. Anti-ageing benefits. Water Soluble.",
+      "benefits": [
+        "Essential for Skin and scalp hydration.",
+        "Equivalent to Seppic AQUAXYL Stabilized Retinol against heat & light with niosome technology.",
+        "Anti-ageing benefits.",
+        "Water Soluble."
+      ],
+      "technicalInfo": {
+        "Solubility": "Water Soluble"
+      },
+      "seoTitle": "RETINOL (Retinol, Glycerin, Polysorbate 80, Propanediol Camellia Sinensis Leaf Extract, Sclerotium gum, xanthun Gum, hyaluronic acid & water) | Acticos",
+      "seoDescription": "Essential for Skin and scalp hydration. Equivalent to Seppic AQUAXYL Stabilized Retinol against heat & light with niosome technology. Anti-ageing bene",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "pureshield-swzt",
+      "code": "PURESHIELD-SWZT",
+      "name": "PURESHIELD SWZT",
+      "inci": "Aqua, Titanium Dioxide, Aluminium Hydroxide, Stearic Acid, C12-15 Alkyl Benzoate, Zinc Oxide, Ceteareth-20, Polysorbate 60, Cetosteryl Alcohol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "sun-care"
+      ],
+      "functions": [
+        "sun-care"
+      ],
+      "description": "Proprietary Mineral Blend of various ingredients which has super UV and skincare benefits and can be used in Serums, Sunscreen etc.",
+      "benefits": [
+        "Proprietary Mineral Blend of various ingredients which has super UV and skincare benefits and can be used in Serums, Sunscreen etc."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PURESHIELD SWZT (Aqua, Titanium Dioxide, Aluminium Hydroxide, Stearic Acid, C12-15 Alkyl Benzoate, Zinc Oxide, Ceteareth-20, Polysorbate 60, Cetosteryl Alcohol) | Acticos",
+      "seoDescription": "Proprietary Mineral Blend of various ingredients which has super UV and skincare benefits and can be used in Serums, Sunscreen etc.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "sunshield-yellowguard",
+      "code": "SUNSHIELD-YELLOWGUARD",
+      "name": "SUNSHIELD YELLOWGUARD",
+      "inci": "Aqua, Butylene Glycol, Oxathiazolidine, Phenoxyethanol, Triethylene Glycol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "sun-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "sun-care"
+      ],
+      "description": "Sunsheield yellowguard is a stabilized form of Oxathiazolidine presented as clear transparent liquid. It is a potent anti-oxidant and reactive oxygen species (ROS) scavenger offering comprehensive protection from damaging blue & yellow light, visible light & Infrared light. Multi Benefits include - Blue & yellow light Shield, Anti-oxidant, Skin pigmentation & SPF Booster",
+      "benefits": [
+        "Sunsheield yellowguard is a stabilized form of Oxathiazolidine presented as clear transparent liquid.",
+        "It is a potent anti-oxidant and reactive oxygen species (ROS) scavenger offering comprehensive protection from damaging blue & yellow light, visible light & Infrared light.",
+        "Multi Benefits include - Blue & yellow light Shield, Anti-oxidant, Skin pigmentation & SPF Booster"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "SUNSHIELD YELLOWGUARD (Aqua, Butylene Glycol, Oxathiazolidine, Phenoxyethanol, Triethylene Glycol) | Acticos",
+      "seoDescription": "Sunsheield yellowguard is a stabilized form of Oxathiazolidine presented as clear transparent liquid. It is a potent anti-oxidant and reactive oxygen ",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "lecifeel",
+      "code": "LECIFEEL",
+      "name": "LECIFEEL",
+      "inci": "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Lecithin, Xanthan Gum",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "moisturization",
+        "texture-sensory"
+      ],
+      "description": "Improvise your formulation by using CHEM-LECIFEEL as it helps, Boost product efficacy, Ensures high oil-holding capacity, Customizable thickening for various textures, Compatible with leave-on and rinse-off formulations, Breaks down instantly on contact, Delivers intense & long lasting hydration & is suitable for all skin types. Key benefits - Non sticky, Absorbs quickly & Light weight.",
+      "benefits": [
+        "Improvise your formulation by using CHEM-LECIFEEL as it helps, Boost product efficacy, Ensures high oil-holding capacity, Customizable thickening for various textures, Compatible with leave-on and rinse-off formulations, Breaks down instantly on contact, Delivers intense & long lasting hydration & is suitable for all skin types.",
+        "Key benefits - Non sticky, Absorbs quickly & Light weight."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "LECIFEEL (Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Lecithin, Xanthan Gum) | Acticos",
+      "seoDescription": "Improvise your formulation by using CHEM-LECIFEEL as it helps, Boost product efficacy, Ensures high oil-holding capacity, Customizable thickening for ",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "hexadecahyal-ga",
+      "code": "HEXADECAHYAL-GA",
+      "name": "HEXADECAHYAL-GA",
+      "inci": "Water, 1,2-Hexanediol, Sodium Hyaluronate, Potassium Hyaluronate, Sodium Hyaluronate Crosspolymer, Sodium Acetylated Hyaluronate, Hydroxypropyltrimonium Hyaluronate, Hydrolyzed Hyaluronic Acid, Hyaluronic Acid, Hydrolyzed Sodium Hyaluronate, Pentylene Glycol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "moisturization",
+        "anti-aging"
+      ],
+      "description": "Multi-vitamin active with a 16-active hyaluronic molecule blend. Improves skin hydration, maintains skin elasticity and reduces skin damage from outside stress.",
+      "benefits": [
+        "Multi-vitamin active with a 16-active hyaluronic molecule blend.",
+        "Improves skin hydration, maintains skin elasticity and reduces skin damage from outside stress."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "HEXADECAHYAL-GA (Water, 1,2-Hexanediol, Sodium Hyaluronate, Potassium Hyaluronate, Sodium Hyaluronate Crosspolymer, Sodium Acetylated Hyaluronate, Hydroxypropyltrimonium Hyaluronate, Hydrolyzed Hyaluronic Acid, Hyaluronic Acid, Hydrolyzed Sodium Hyaluronate, Pentylene Glycol) | Acticos",
+      "seoDescription": "Multi-vitamin active with a 16-active hyaluronic molecule blend. Improves skin hydration, maintains skin elasticity and reduces skin damage from outsi",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "octavit-ga",
+      "code": "OCTAVIT-GA",
+      "name": "OCTAVIT-GA",
+      "inci": "Water, Butylene Glycol, Niacinamide, Panthenol, Biotin, Folic Acid, Ascorbic Acid, Tocopherol, Retinyl Palmitate, Pyridoxine HCL, Arachis Hypogaea (Peanut) Oil",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "anti-aging"
+      ],
+      "description": "Multi-vitamin complex (A,B,C,E) supplying nutrients for healthy skin. Anti-wrinkle efficacy with many benefits of Vitamins. Combination and effective blend of 8 essential multi-vitamins which offers numerous skin care benefits.",
+      "benefits": [
+        "Multi-vitamin complex (A,B,C,E) supplying nutrients for healthy skin.",
+        "Anti-wrinkle efficacy with many benefits of Vitamins.",
+        "Combination and effective blend of 8 essential multi-vitamins which offers numerous skin care benefits."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "OCTAVIT-GA (Water, Butylene Glycol, Niacinamide, Panthenol, Biotin, Folic Acid, Ascorbic Acid, Tocopherol, Retinyl Palmitate, Pyridoxine HCL, Arachis Hypogaea (Peanut) Oil) | Acticos",
+      "seoDescription": "Multi-vitamin complex (A,B,C,E) supplying nutrients for healthy skin. Anti-wrinkle efficacy with many benefits of Vitamins. Combination and effective ",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "decavit-ga",
+      "code": "DECAVIT-GA",
+      "name": "DECAVIT-GA",
+      "inci": "Water, Butylene Glycol, Niacinamide, Panthenol, Sodium Hyaluronate, Polysorbate 80, Tocopherol, Biotin, Folic Acid, Ascorbic Acid, Pyridoxine Hcl, Ethylmethionine, Phytonadione, Cholecalciferol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [
+        "anti-aging"
+      ],
+      "description": "DECAVIT-GA is a water-soluble ingredient and can be incorporated in many types of skin care products, such as lotion, emulsion, toner, mist, serum, cream, etc. Multi-vitamin complex (A,B,C,E) supplying nutrients for healthy skin. Anti-wrinkle efficacy with many benefits of Vitamins. Blend of 10 essential multi-vitamins.",
+      "benefits": [
+        "DECAVIT-GA is a water-soluble ingredient and can be incorporated in many types of skin care products, such as lotion, emulsion, toner, mist, serum, cream, etc.",
+        "Multi-vitamin complex (A,B,C,E) supplying nutrients for healthy skin.",
+        "Anti-wrinkle efficacy with many benefits of Vitamins.",
+        "Blend of 10 essential multi-vitamins."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "DECAVIT-GA (Water, Butylene Glycol, Niacinamide, Panthenol, Sodium Hyaluronate, Polysorbate 80, Tocopherol, Biotin, Folic Acid, Ascorbic Acid, Pyridoxine Hcl, Ethylmethionine, Phytonadione, Cholecalciferol) | Acticos",
+      "seoDescription": "DECAVIT-GA is a water-soluble ingredient and can be incorporated in many types of skin care products, such as lotion, emulsion, toner, mist, serum, cr",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "hexa-peptide-complex",
+      "code": "HEXA-PEPTIDE-COMPLEX",
+      "name": "HEXA-PEPTIDE COMPLEX",
+      "inci": "Aqua, Glycerin, Butylene Glycol, acetyl hexapeptide-8, Palmitoyl tripeptide-1, Palmitoyl pentapeptide-4, copper tripeptide-1, hexapeptide- 9, tripeptide-1, pentylene glycol Water,",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "sun-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "anti-aging",
+        "sun-care"
+      ],
+      "description": "Combination of 6 peptides used for pro-aging support, anti-inflammatory and muscle building properties Used in Sunscreen -lotions, sticks, foundations, lip balms & Sprays",
+      "benefits": [
+        "Combination of 6 peptides used for pro-aging support, anti-inflammatory and muscle building properties Used in Sunscreen -lotions, sticks, foundations, lip balms & Sprays"
+      ],
+      "technicalInfo": null,
+      "seoTitle": "HEXA-PEPTIDE COMPLEX (Aqua, Glycerin, Butylene Glycol, acetyl hexapeptide-8, Palmitoyl tripeptide-1, Palmitoyl pentapeptide-4, copper tripeptide-1, hexapeptide- 9, tripeptide-1, pentylene glycol Water,) | Acticos",
+      "seoDescription": "Combination of 6 peptides used for pro-aging support, anti-inflammatory and muscle building properties Used in Sunscreen -lotions, sticks, foundations",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "peptide-15-complex",
+      "code": "PEPTIDE-15-COMPLEX",
+      "name": "PEPTIDE 15 COMPLEX",
+      "inci": "Water, Butylene Glycol, Saccharide Hydrolysate, Heptasodium Hexacarboxymethyl Dipeptide-12, Acetyl Hexapeptide-8, Acetyl Dipeptide-1, Cetyl Ester, Nonapeptide-1, Copper Tripeptide-1, Tripeptide-1, Pentapeptide-3, Hexapeptide-9, Dipeptide Diaminobutyroyl Benzylamide Diacetate, Palmitoyl Pentapeptide-4, Palmitoyl Tripeptide-1, Palmitoyl Tripeptide-5, Palmitoyl Tetrapeptide-7, Palmitoyl Hexapeptide-12, Ascorbic acid polypeptide",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "sun-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "anti-aging",
+        "sun-care"
+      ],
+      "description": "Combination of 15 peptides used for pro-aging support, anti-inflammatory and muscle-building properties. Used in sunscreen, lotions, sticks, foundations, lip balms and sprays.",
+      "benefits": [
+        "Combination of 15 peptides used for pro-aging support, anti-inflammatory and muscle-building properties.",
+        "Used in sunscreen, lotions, sticks, foundations, lip balms and sprays."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PEPTIDE 15 COMPLEX (Water, Butylene Glycol, Saccharide Hydrolysate, Heptasodium Hexacarboxymethyl Dipeptide-12, Acetyl Hexapeptide-8, Acetyl Dipeptide-1, Cetyl Ester, Nonapeptide-1, Copper Tripeptide-1, Tripeptide-1, Pentapeptide-3, Hexapeptide-9, Dipeptide Diaminobutyroyl Benzylamide Diacetate, Palmitoyl Pentapeptide-4, Palmitoyl Tripeptide-1, Palmitoyl Tripeptide-5, Palmitoyl Tetrapeptide-7, Palmitoyl Hexapeptide-12, Ascorbic acid polypeptide) | Acticos",
+      "seoDescription": "Combination of 15 peptides used for pro-aging support, anti-inflammatory and muscle-building properties. Used in sunscreen, lotions, sticks, foundatio",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "bakuchiol",
+      "code": "BAKUCHIOL",
+      "name": "BAKUCHIOL",
+      "inci": "Psoralea corylifolia (Bakuchiol), Sesamum indicum (til) seed oil",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care",
+        "color-cosmetics"
+      ],
+      "functions": [
+        "brightening",
+        "anti-aging"
+      ],
+      "description": "Known for anti-ageing, anti-hyperpigmentation and anti-inflammatory properties, promotes radiant complexions. Effective for acne-prone and sensitive skin along with normal skin. Alternative to retinol.",
+      "benefits": [
+        "Known for anti-ageing, anti-hyperpigmentation and anti-inflammatory properties, promotes radiant complexions.",
+        "Effective for acne-prone and sensitive skin along with normal skin.",
+        "Alternative to retinol."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "BAKUCHIOL (Psoralea corylifolia (Bakuchiol), Sesamum indicum (til) seed oil) | Acticos",
+      "seoDescription": "Known for anti-ageing, anti-hyperpigmentation and anti-inflammatory properties, promotes radiant complexions. Effective for acne-prone and sensitive s",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "acnepure-complex",
+      "code": "ACNEPURE-COMPLEX",
+      "name": "ACNEPURE COMPLEX",
+      "inci": "Aqua, Butylene Glycol, Syzygium cumini (jamun) seed extract, Mallotus philippinensis (kabila) extract, Vetiveria zizanioides (khus) extract, Matricaria chamomilla (chamomile) extract, Rosmarinus officinalis (rosemary) extract, Curcuma amada (amba haldi) extract, Balsamodendron mukul (gugul) extract, Cedrus deodara (devdaru) extract, Salix alba (willow bark) extract, Aesculus hippocastanum (horse chestnut) extract",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "color-cosmetics"
+      ],
+      "functions": [],
+      "description": "A specially designed bioactive complex derived from powerful herbal actives. It works against acne generation by preventing the generation of dihydrotestosterone and bacterium lipase from Propionibacterium acnes.",
+      "benefits": [
+        "A specially designed bioactive complex derived from powerful herbal actives.",
+        "It works against acne generation by preventing the generation of dihydrotestosterone and bacterium lipase from Propionibacterium acnes."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "ACNEPURE COMPLEX (Aqua, Butylene Glycol, Syzygium cumini (jamun) seed extract, Mallotus philippinensis (kabila) extract, Vetiveria zizanioides (khus) extract, Matricaria chamomilla (chamomile) extract, Rosmarinus officinalis (rosemary) extract, Curcuma amada (amba haldi) extract, Balsamodendron mukul (gugul) extract, Cedrus deodara (devdaru) extract, Salix alba (willow bark) extract, Aesculus hippocastanum (horse chestnut) extract) | Acticos",
+      "seoDescription": "A specially designed bioactive complex derived from powerful herbal actives. It works against acne generation by preventing the generation of dihydrot",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "actishield-xy",
+      "code": "ACTISHIELD-XY",
+      "name": "ACTISHIELD XY",
+      "inci": "Aqua (and) C12-C15 Alkyl Benzoate, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Ethylhexyl Triazone, Bis Ethylhexyloxyphenol Methoxyphenyl Triazine, Lecithin, 1,3-Butylene Glycol, Coconut Oil, Carbomer, Phenoxyethanol",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "sun-care"
+      ],
+      "functions": [
+        "sun-care"
+      ],
+      "description": "An oil-soluble sunscreen agent and a specially designed blend of organic topical sunscreen agents with UVA and UVB filters.",
+      "benefits": [
+        "An oil-soluble sunscreen agent and a specially designed blend of organic topical sunscreen agents with UVA and UVB filters."
+      ],
+      "technicalInfo": {
+        "Solubility": "oil soluble"
+      },
+      "seoTitle": "ACTISHIELD XY (Aqua (and) C12-C15 Alkyl Benzoate, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Ethylhexyl Triazone, Bis Ethylhexyloxyphenol Methoxyphenyl Triazine, Lecithin, 1,3-Butylene Glycol, Coconut Oil, Carbomer, Phenoxyethanol) | Acticos",
+      "seoDescription": "An oil-soluble sunscreen agent and a specially designed blend of organic topical sunscreen agents with UVA and UVB filters.",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "puretone-bright",
+      "code": "PURETONE-BRIGHT",
+      "name": "PURETONE BRIGHT",
+      "inci": "Propylene Glycol (and) Terminalia ferdinandiana (kakadu plum) extract (and) Rosa canina (rosehip) extract (and) Citrus sinensis (orange) extract (and) Citrus paradisi (grapefruit) extract (and) Actinidia deliciosa (kiwifruit) extract (and) Ethyl Ascorbic Acid",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "skin-care"
+      ],
+      "functions": [],
+      "description": "Kakadu plum is renowned for its exceptionally high content of powerful antioxidant vitamin C, which helps neutralize free radicals in the skin that contribute to dullness and aging.",
+      "benefits": [
+        "Kakadu plum is renowned for its exceptionally high content of powerful antioxidant vitamin C, which helps neutralize free radicals in the skin that contribute to dullness and aging."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "PURETONE BRIGHT (Propylene Glycol (and) Terminalia ferdinandiana (kakadu plum) extract (and) Rosa canina (rosehip) extract (and) Citrus sinensis (orange) extract (and) Citrus paradisi (grapefruit) extract (and) Actinidia deliciosa (kiwifruit) extract (and) Ethyl Ascorbic Acid) | Acticos",
+      "seoDescription": "Kakadu plum is renowned for its exceptionally high content of powerful antioxidant vitamin C, which helps neutralize free radicals in the skin that co",
+      "imageUrl": null,
+      "isSample": false
+    },
+    {
+      "slug": "uniscalp-complex",
+      "code": "UNISCALP-COMPLEX",
+      "name": "UNISCALP COMPLEX",
+      "inci": "Aqua, Butylene Glycol, Azadirachta Indica (neem) leaf extract, Trigonella foenum (methi) seed extract, Aloe barbadensis (Aloe vera) leaf extract, Tea tree leaf extract, Salvia rosmarinus (rosemary) extract, Citrus limon (lemon) peel extract, Matricaria chamomilla (chamomile) flower extract, Cuminum cyminum (cumin) seed extract, Camellia sinensis (green tea) extract, Allium cepa (red onion) extract, Allium sativum (garlic) extract, Zingiber (ginger) extract, Ocimum sanctum (tulsi) extract, Mentha piperita (peppermint) leaf extract, Trachyspermum ammi (ajwain) seed extract",
+      "category": "proprietery-blend-actives",
+      "applications": [
+        "hair-care"
+      ],
+      "functions": [
+        "preservation",
+        "hair-scalp"
+      ],
+      "description": "Azadirachta Indica (Neem) contains bioactive compounds including nimbin, nimbidin, azadirachtin, gedunin and quercetin, contributing to anti-inflammatory, antimicrobial and antifungal properties. Benefits include anti-dandruff and scalp irritation relief.",
+      "benefits": [
+        "Azadirachta Indica (Neem) contains bioactive compounds including nimbin, nimbidin, azadirachtin, gedunin and quercetin, contributing to anti-inflammatory, antimicrobial and antifungal properties.",
+        "Benefits include anti-dandruff and scalp irritation relief."
+      ],
+      "technicalInfo": null,
+      "seoTitle": "UNISCALP COMPLEX (Aqua, Butylene Glycol, Azadirachta Indica (neem) leaf extract, Trigonella foenum (methi) seed extract, Aloe barbadensis (Aloe vera) leaf extract, Tea tree leaf extract, Salvia rosmarinus (rosemary) extract, Citrus limon (lemon) peel extract, Matricaria chamomilla (chamomile) flower extract, Cuminum cyminum (cumin) seed extract, Camellia sinensis (green tea) extract, Allium cepa (red onion) extract, Allium sativum (garlic) extract, Zingiber (ginger) extract, Ocimum sanctum (tulsi) extract, Mentha piperita (peppermint) leaf extract, Trachyspermum ammi (ajwain) seed extract) | Acticos",
+      "seoDescription": "Azadirachta Indica (Neem) contains bioactive compounds including nimbin, nimbidin, azadirachtin, gedunin and quercetin, contributing to anti-inflammat",
+      "imageUrl": null,
+      "isSample": false
+    }
+  ]
+}
