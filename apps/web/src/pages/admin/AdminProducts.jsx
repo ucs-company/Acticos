@@ -131,15 +131,30 @@ export default function AdminProducts() {
       <input id="aq" type="search" className="field mt-5 max-w-md" placeholder="Search products" value={q} onChange={(event) => setQ(event.target.value)} />
       <div className="mt-5">
         {list.loading ? <Loading /> : list.error ? <ErrorState error={list.error} onRetry={list.reload} /> : !list.data?.length ? <EmptyState title="No products yet" text="Add a product or run the import script." /> : (
-          <div className="overflow-x-auto rounded-2xl bg-white"><table className="w-full text-left text-[15px]"><thead className="border-b border-ink/10 text-sm text-mist-600"><tr><th className="p-4">Name</th><th className="p-4">INCI</th><th className="p-4">Category</th><th className="p-4">Status</th><th className="p-4 text-right">Actions</th></tr></thead>
-            <tbody className="divide-y divide-ink/10">{list.data.map((product) => (
-              <tr key={product.id}><td className="p-4 font-medium">{product.name}</td><td className="p-4">{product.inci}</td><td className="p-4">{product.category.name}</td>
-                <td className="p-4"><span className={`rounded-full px-2.5 py-1 text-xs ${product.status === 'PUBLISHED' ? 'bg-emerald-100 text-emerald-900' : 'bg-mist text-mist-600'}`}>{product.status === 'PUBLISHED' ? 'Published' : 'Draft'}</span></td>
-                <td className="space-x-3 whitespace-nowrap p-4 text-right text-sm font-medium text-electric">
+          <>
+            <div className="hidden overflow-x-auto rounded-2xl bg-white md:block"><table className="w-full text-left text-[15px]"><thead className="border-b border-ink/10 text-sm text-mist-600"><tr><th className="p-4">Name</th><th className="p-4">INCI</th><th className="p-4">Category</th><th className="p-4">Status</th><th className="p-4 text-right">Actions</th></tr></thead>
+              <tbody className="divide-y divide-ink/10">{list.data.map((product) => (
+                <tr key={product.id}><td className="p-4 font-medium">{product.name}</td><td className="p-4">{product.inci}</td><td className="p-4">{product.category.name}</td>
+                  <td className="p-4"><span className={`rounded-full px-2.5 py-1 text-xs ${product.status === 'PUBLISHED' ? 'bg-emerald-100 text-emerald-900' : 'bg-mist text-mist-600'}`}>{product.status === 'PUBLISHED' ? 'Published' : 'Draft'}</span></td>
+                  <td className="space-x-3 whitespace-nowrap p-4 text-right text-sm font-medium text-electric">
+                    <button onClick={() => open(product.id)}>Edit</button>
+                    <button onClick={() => act(() => admin.setStatus(product.id, product.status !== 'PUBLISHED'))}>{product.status === 'PUBLISHED' ? 'Unpublish' : 'Publish'}</button>
+                    {canDelete && <button className="text-red-600" onClick={() => confirm(`Delete ${product.name}?`) && act(() => admin.deleteProduct(product.id))}>Delete</button>}
+                  </td></tr>))}</tbody></table></div>
+            <div className="space-y-3 md:hidden">{list.data.map((product) => (
+              <article key={product.id} className="rounded-2xl bg-white p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0"><h2 className="truncate font-semibold">{product.name}</h2><p className="mt-1 text-sm text-mist-600">{product.category.name}</p></div>
+                  <span className={`shrink-0 rounded-full px-2.5 py-1 text-xs ${product.status === 'PUBLISHED' ? 'bg-emerald-100 text-emerald-900' : 'bg-mist text-mist-600'}`}>{product.status === 'PUBLISHED' ? 'Published' : 'Draft'}</span>
+                </div>
+                <p className="mt-2 line-clamp-2 text-sm text-mist-600">{product.inci}</p>
+                <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm font-medium text-electric">
                   <button onClick={() => open(product.id)}>Edit</button>
                   <button onClick={() => act(() => admin.setStatus(product.id, product.status !== 'PUBLISHED'))}>{product.status === 'PUBLISHED' ? 'Unpublish' : 'Publish'}</button>
                   {canDelete && <button className="text-red-600" onClick={() => confirm(`Delete ${product.name}?`) && act(() => admin.deleteProduct(product.id))}>Delete</button>}
-                </td></tr>))}</tbody></table></div>
+                </div>
+              </article>))}</div>
+          </>
         )}
       </div>
       {edit && refs.data && <ProductForm initial={edit} categories={refs.data.categories} applications={refs.data.applications} solutions={refs.data.solutions} onClose={() => setEdit(null)} onSaved={() => { setEdit(null); list.reload(); }} />}

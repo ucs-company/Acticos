@@ -87,22 +87,36 @@ export default function AdminDocuments() {
 
       <div className="mt-8">
         {list.loading ? <Loading /> : list.error ? <ErrorState error={list.error} onRetry={list.reload} /> : !list.data?.length ? <EmptyState title="No documents yet" text="Upload the first product document." /> : (
-          <div className="overflow-x-auto rounded-2xl bg-white">
-            <table className="w-full text-left text-[15px]">
-              <thead className="border-b border-ink/10 text-sm text-mist-600"><tr><th className="p-4">Title</th><th className="p-4">Type</th><th className="p-4">Product</th><th className="p-4">File</th><th className="p-4 text-right">Actions</th></tr></thead>
-              <tbody className="divide-y divide-ink/10">
-                {list.data.map((document) => (
-                  <tr key={document.id}>
-                    <td className="p-4 font-medium">{document.title}</td>
-                    <td className="p-4">{document.type}</td>
-                    <td className="p-4">{document.productName || '—'}</td>
-                    <td className="p-4">{document.fileUrl ? <a className="text-electric hover:underline" href={document.fileUrl} target="_blank" rel="noreferrer">Open</a> : '—'}</td>
-                    <td className="p-4 text-right">{canDelete && <button className="text-sm font-medium text-red-600" onClick={() => remove(document.id, document.title)}>Delete</button>}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <>
+            <div className="hidden overflow-x-auto rounded-2xl bg-white md:block">
+              <table className="w-full text-left text-[15px]">
+                <thead className="border-b border-ink/10 text-sm text-mist-600"><tr><th className="p-4">Title</th><th className="p-4">Type</th><th className="p-4">Product</th><th className="p-4">File</th><th className="p-4 text-right">Actions</th></tr></thead>
+                <tbody className="divide-y divide-ink/10">
+                  {list.data.map((document) => (
+                    <tr key={document.id}>
+                      <td className="p-4 font-medium">{document.title}</td>
+                      <td className="p-4">{document.type}</td>
+                      <td className="p-4">{document.productName || '—'}</td>
+                      <td className="p-4">{document.fileUrl ? <a className="text-electric hover:underline" href={document.fileUrl} target="_blank" rel="noreferrer">Open</a> : '—'}</td>
+                      <td className="p-4 text-right">{canDelete && <button className="text-sm font-medium text-red-600" onClick={() => remove(document.id, document.title)}>Delete</button>}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="space-y-3 md:hidden">
+              {list.data.map((document) => (
+                <article key={document.id} className="rounded-2xl bg-white p-4">
+                  <h2 className="font-semibold">{document.title}</h2>
+                  <p className="mt-1 text-sm text-mist-600">{document.type}{document.productName ? ` · ${document.productName}` : ''}</p>
+                  <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm font-medium">
+                    {document.fileUrl && <a className="text-electric hover:underline" href={document.fileUrl} target="_blank" rel="noreferrer">Open file</a>}
+                    {canDelete && <button className="text-red-600" onClick={() => remove(document.id, document.title)}>Delete</button>}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
         )}
       </div>
     </div>

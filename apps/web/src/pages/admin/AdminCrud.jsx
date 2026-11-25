@@ -146,27 +146,43 @@ export default function AdminCrud({ resource }) {
         {list.loading ? <Loading /> : list.error ? <ErrorState error={list.error} onRetry={list.reload} /> : !list.data?.length ? (
           <EmptyState title={`No ${config.title.toLowerCase()} yet`} text={`Add your first ${config.singular}.`} />
         ) : (
-          <div className="overflow-x-auto rounded-2xl bg-white">
-            <table className="w-full text-left text-[15px]">
-              <thead className="border-b border-ink/10 text-sm text-mist-600">
-                <tr>
-                  {config.columns.map(([label]) => <th key={label} className="p-4">{label}</th>)}
-                  <th className="p-4 text-right">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-ink/10">
-                {list.data.map((row) => (
-                  <tr key={row.id}>
-                    {config.columns.map(([label, key]) => <td key={label} className="max-w-xs truncate p-4">{String(row[key] ?? '')}</td>)}
-                    <td className="space-x-3 whitespace-nowrap p-4 text-right text-sm font-medium text-electric">
-                      <button onClick={() => setEdit({ ...blankFor(config), ...row })}>Edit</button>
-                      {canDelete && <button className="text-red-600" onClick={() => confirm(`Delete ${row.name || row.title}?`) && act(() => admin.remove(resource, row.id))}>Delete</button>}
-                    </td>
+          <>
+            <div className="hidden overflow-x-auto rounded-2xl bg-white md:block">
+              <table className="w-full text-left text-[15px]">
+                <thead className="border-b border-ink/10 text-sm text-mist-600">
+                  <tr>
+                    {config.columns.map(([label]) => <th key={label} className="p-4">{label}</th>)}
+                    <th className="p-4 text-right">Actions</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className="divide-y divide-ink/10">
+                  {list.data.map((row) => (
+                    <tr key={row.id}>
+                      {config.columns.map(([label, key]) => <td key={label} className="max-w-xs truncate p-4">{String(row[key] ?? '')}</td>)}
+                      <td className="space-x-3 whitespace-nowrap p-4 text-right text-sm font-medium text-electric">
+                        <button onClick={() => setEdit({ ...blankFor(config), ...row })}>Edit</button>
+                        {canDelete && <button className="text-red-600" onClick={() => confirm(`Delete ${row.name || row.title}?`) && act(() => admin.remove(resource, row.id))}>Delete</button>}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="space-y-3 md:hidden">
+              {list.data.map((row) => (
+                <article key={row.id} className="rounded-2xl bg-white p-4">
+                  <h2 className="font-semibold">{String(row[config.columns[0][1]] ?? '')}</h2>
+                  <dl className="mt-2 grid gap-1 text-sm">
+                    {config.columns.slice(1).map(([label, key]) => <div key={label} className="flex gap-2"><dt className="shrink-0 text-mist-600">{label}:</dt><dd className="min-w-0 break-words">{String(row[key] ?? '')}</dd></div>)}
+                  </dl>
+                  <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm font-medium text-electric">
+                    <button onClick={() => setEdit({ ...blankFor(config), ...row })}>Edit</button>
+                    {canDelete && <button className="text-red-600" onClick={() => confirm(`Delete ${row.name || row.title}?`) && act(() => admin.remove(resource, row.id))}>Delete</button>}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
         )}
       </div>
       {edit && <RecordForm config={config} resource={resource} initial={edit} onClose={() => setEdit(null)} onSaved={() => { setEdit(null); list.reload(); }} />}

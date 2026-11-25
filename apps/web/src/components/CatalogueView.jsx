@@ -43,11 +43,11 @@ export default function CatalogueView({ categorySlug = null, categories, applica
   const sidebar = useMemo(() => [{ slug: '', name: 'All Products', to: '/products' }, ...categories.map((c) => ({ ...c, to: `/products/${c.slug}` }))], [categories]);
 
   return (
-    <div className="container-page grid gap-10 py-14 lg:grid-cols-[260px_1fr]">
-      <aside aria-label="Product categories">
-        <Reveal as="nav" className="lg:sticky lg:top-28">
+    <div className="container-page grid min-w-0 gap-10 py-14 lg:grid-cols-[260px_1fr]">
+      <aside aria-label="Product categories" className="min-w-0">
+        <Reveal as="nav" className="min-w-0 lg:sticky lg:top-28">
           <h2 className="mb-3 text-sm font-medium text-mist-600">Categories</h2>
-          <ul className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:gap-1 lg:overflow-visible">
+          <ul className="flex flex-wrap gap-2 pb-2 lg:flex-col lg:gap-1">
             {sidebar.map((c) => {
               const active = (c.slug || null) === (categorySlug || null);
               return (
@@ -63,7 +63,7 @@ export default function CatalogueView({ categorySlug = null, categories, applica
         </Reveal>
       </aside>
 
-      <div>
+      <div className="min-w-0">
         <Reveal>
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             <div className="relative sm:col-span-2 xl:col-span-4">
