@@ -19,7 +19,7 @@ export default function CategoryCard({ category, index = 0 }) {
       <Link to={`/products/${category.slug}`} className="group relative flex h-full min-h-[26rem] flex-col justify-between overflow-hidden rounded-3xl bg-navy-800 p-7 text-white transition-shadow duration-500 hover:shadow-glow">
         <div className="absolute inset-0 opacity-70 transition-opacity duration-500 group-hover:opacity-100"><SceneCanvas scene={category.visual} label={`${category.name} visual`} /></div>
         <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent" aria-hidden="true" />
-        <span className="relative text-sm text-white/60">{category._count?.products ?? ''} {category._count ? 'products' : ''}</span>
+        <span className="relative text-sm text-white/60">{category._count?.products ?? ''} {category._count ? 'ingredients' : ''}</span>
         <div className="relative">
           <h3 className="text-2xl font-semibold leading-tight">{category.name}</h3>
           <p className="mt-3 text-[15px] leading-relaxed text-white/70">{category.description?.replace(/\s*\[DATA REQUIRED[^\]]*\]/, '')}</p>

@@ -63,6 +63,15 @@ export default function QuickViewDrawer() {
               </div>
             ) : null}
 
+            {product.solutions?.length ? (
+              <div className="mt-5">
+                <p className="text-xs font-medium text-mist-600">Formulation goals</p>
+                <ul className="mt-2 flex flex-wrap gap-2">
+                  {product.solutions.map((solution) => <li key={solution.slug} className="rounded-full border border-electric/20 bg-electric/10 px-3 py-1.5 text-sm font-medium text-electric">{solution.name}</li>)}
+                </ul>
+              </div>
+            ) : null}
+
             {tech.length ? (
               <div className="mt-5">
                 <p className="text-xs font-medium text-mist-600">Technical highlights</p>
@@ -82,7 +91,7 @@ export default function QuickViewDrawer() {
             ) : null}
 
             <div className="mt-6 grid gap-2">
-              <Link to={`/products/${product.slug}`} onClick={closeQuickView} className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-electric px-5 text-[15px] font-medium text-white transition-colors hover:bg-electric-600">View full details</Link>
+              <Link to={`/products/${product.slug}`} onClick={closeQuickView} className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-electric px-5 text-[15px] font-medium text-white transition-colors hover:bg-electric-600">View ingredient</Link>
               <Link to={`/request-sample?product=${encodeURIComponent(product.name)}`} onClick={closeQuickView} className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-ink/15 px-5 text-[15px] font-medium text-ink transition-colors hover:border-electric hover:text-electric">Request a sample</Link>
               <button type="button" onClick={() => toggleCompare(product)} disabled={compareDisabled} className={`inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full border px-5 text-[15px] font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-40 ${compared ? 'border-electric bg-electric/10 text-electric' : 'border-ink/15 text-ink hover:border-electric hover:text-electric'}`}>
                 {compared ? 'Remove from compare' : compareDisabled ? 'Compare list is full' : 'Add to compare'}

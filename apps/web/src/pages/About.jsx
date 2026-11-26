@@ -10,11 +10,11 @@ import { useAsync } from '@/hooks/useAsync';
 import { SITE } from '@/config/site';
 
 const BLOCKS = [
-  { t: 'Our approach', d: 'We supply ingredients and the technical context needed to use them well. [DATA REQUIRED: company approach statement]' },
-  { t: 'Quality', d: '[DATA REQUIRED: quality systems, certifications and testing. Do not publish until confirmed.]' },
-  { t: 'Technical expertise', d: '[DATA REQUIRED: team background and lab capabilities]' },
-  { t: 'Innovation', d: '[DATA REQUIRED: R&D focus and proprietary blend development]' },
-  { t: 'Customer partnership', d: '[DATA REQUIRED: how Acticos works with formulators and brands]' },
+  { t: 'Our approach', d: 'We combine a focused specialty-ingredient portfolio with application-led technical support for personal care and cosmetic formulators.' },
+  { t: 'Quality', d: 'Specifications, documentation and supply requirements are aligned with each formulation brief from the first conversation.' },
+  { t: 'Technical expertise', d: 'Our team supports ingredient selection, application fit and the practical questions that come up during formulation.' },
+  { t: 'Innovation', d: 'The portfolio includes proprietary blend actives developed for targeted benefits across skincare and haircare.' },
+  { t: 'Customer partnership', d: 'From the first sample to repeat supply, we stay close to the brief and the technical requirements behind it.' },
 ];
 
 export default function About() {

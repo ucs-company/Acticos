@@ -16,7 +16,7 @@ export default function ApplicationCard({ application, className = '' }) {
 
       <div className="relative flex items-start justify-between gap-3">
         <span className="rounded-full border border-white/20 bg-black/25 px-3 py-1 text-xs font-medium text-white/85 backdrop-blur-sm">
-          {count} {count === 1 ? 'product' : 'products'}
+          {count} {count === 1 ? 'ingredient' : 'ingredients'}
         </span>
         <span className="grid h-9 w-9 place-items-center rounded-full border border-white/20 bg-black/20 text-white/80 backdrop-blur-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
           <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6" /></svg>

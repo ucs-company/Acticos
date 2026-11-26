@@ -35,10 +35,10 @@ export default function Products() {
 
   return (
     <>
-      <Seo title={category ? category.name : 'Product Catalogue'} description={desc || 'Browse the Acticos specialty ingredient catalogue.'} path={category ? `/products/${category.slug}` : '/products'} />
+      <Seo title={category ? category.name : 'Ingredient catalogue'} description={desc || 'Browse the Acticos specialty ingredient catalogue.'} path={category ? `/products/${category.slug}` : '/products'} />
       <PageHero
-        title={category ? category.name : 'Product Catalogue'}
-        text={category ? desc : 'Search the Acticos portfolio by product name, INCI or application.'}
+        title={category ? category.name : 'Ingredient catalogue'}
+        text={category ? desc : 'Search the Acticos portfolio by ingredient name, INCI or application.'}
         badge={badge}
         crumbs={[{ label: 'Home', to: '/' }, { label: 'Products', to: category ? '/products' : undefined }, ...(category ? [{ label: category.name }] : [])]}
         visual={category ? <SceneCanvas scene={category.visual} label={`${category.name} visual`} /> : <SceneCanvas scene="active" label="Molecules moving through a formulation" />}

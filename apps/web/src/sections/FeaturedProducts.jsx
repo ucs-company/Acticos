@@ -22,8 +22,8 @@ export default function FeaturedProducts() {
     <section className="section">
       <div className="container-page">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <Reveal><h2 className="h-section">Featured products</h2></Reveal>
-          <Button to="/products" variant="outlineDark">View All Products</Button>
+          <Reveal><h2 className="h-section">Portfolio highlights</h2></Reveal>
+          <Button to="/products" variant="outlineDark">Browse all ingredients</Button>
         </div>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {loading ? <div className="sm:col-span-2 xl:col-span-4"><Loading /></div>

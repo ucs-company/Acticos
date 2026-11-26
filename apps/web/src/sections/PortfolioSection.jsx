@@ -10,7 +10,8 @@ export default function PortfolioSection() {
     <section className="section bg-mist">
       <div className="container-page">
         <Reveal>
-          <h2 className="h-section max-w-2xl">Our Product Portfolio</h2>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-electric">Product portfolio</p>
+          <h2 className="h-section mt-3 max-w-2xl">Ingredient families</h2>
           <p className="lead mt-4">Explore specialty ingredients designed for high-performance personal care formulations.</p>
         </Reveal>
         <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">

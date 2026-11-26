@@ -2,7 +2,7 @@ import Reveal from '@/animations/Reveal';
 import { Stagger, StaggerItem } from '@/animations/Stagger';
 
 const PILLARS = [
-  { t: 'Quality', d: 'Specifications and documentation you can build a formulation around. [DATA REQUIRED: certifications]' },
+  { t: 'Quality', d: 'Specifications, documentation and supply requirements are part of the conversation from the start.' },
   { t: 'Consistency', d: 'Predictable behaviour from one batch to the next.' },
   { t: 'Technical Expertise', d: 'People who understand how an ingredient performs in a real formula.' },
   { t: 'Innovation', d: 'A portfolio that includes proprietary blend actives.' },

@@ -35,7 +35,7 @@ export default function MobileFilterSheet({ open, onClose, categories, applicati
                 <label className="grid gap-1.5 text-sm font-medium">Category<select className="field" value={category} onChange={(event) => update({ category: event.target.value })}><option value="">All categories</option>{categories.map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}</select></label>
               )}
               <label className="grid gap-1.5 text-sm font-medium">Application<select className="field" value={application} onChange={(event) => update({ application: event.target.value })}><option value="">All applications</option>{applications.map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}</select></label>
-              <label className="grid gap-1.5 text-sm font-medium">Function<select className="field" value={fn} onChange={(event) => update({ fn: event.target.value })}><option value="">All functions</option>{solutions.map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}</select></label>
+              <label className="grid gap-1.5 text-sm font-medium">Formulation goal<select className="field" value={fn} onChange={(event) => update({ fn: event.target.value })}><option value="">All formulation goals</option>{solutions.map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}</select></label>
               <label className="grid gap-1.5 text-sm font-medium">Sort<select className="field" value={sort} onChange={(event) => update({ sort: event.target.value })}><option value="name-asc">Name A to Z</option><option value="name-desc">Name Z to A</option></select></label>
             </div>
 

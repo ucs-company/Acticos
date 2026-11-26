@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_75%_45%,rgba(78,138,46,.35),transparent_70%)]" aria-hidden="true" />
       <div ref={gridRef} className="grid-bg absolute -inset-y-[8%] inset-x-0 opacity-70 [mask-image:radial-gradient(70%_70%_at_70%_50%,black,transparent)]" aria-hidden="true" />
       <div className="absolute inset-0"><HeroVideo /></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/75 to-navy-950/30" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/75 to-navy-950/30" aria-hidden="true" />
       <div className="container-page relative flex min-h-[100svh] items-center pb-20 pt-32">
         <div className="max-w-2xl">
           <AnimatedWords lines={['Advanced Ingredients.', 'Better Formulations.']} className="h-display" />

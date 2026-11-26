@@ -38,7 +38,7 @@ export default function ApplicationDetail() {
             <ApplicationVisual application={app} className="h-full w-full" priority />
           </GsapImageParallax>
         </div>
-        <Reveal><h2 className="text-3xl font-semibold">Relevant Acticos products</h2></Reveal>
+        <Reveal><h2 className="text-3xl font-semibold">Relevant ingredients</h2></Reveal>
         <div className="mt-8">
           {products.loading ? <Loading /> : products.error ? <ErrorState error={products.error} onRetry={products.reload} /> : !products.data?.length ? <EmptyState title="No products listed yet" text="Products for this application will appear here." /> : (
             <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">{products.data.map((product, index) => <ProductCard key={product.slug} product={product} index={index} />)}</div>

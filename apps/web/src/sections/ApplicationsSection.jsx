@@ -14,7 +14,7 @@ export default function ApplicationsSection() {
         <Reveal>
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-electric">Applications</p>
           <h2 className="h-section mt-3">Built for the formats you develop</h2>
-          <p className="lead mt-4">Find ingredients by where they will be used. Each application links to the matching products.</p>
+          <p className="lead mt-4">Find ingredients by where they will be used. Each application links to the matching ingredients.</p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
             <Link to="/applications" className="inline-flex items-center gap-2 font-medium text-electric hover:underline">
               All applications

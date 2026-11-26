@@ -84,8 +84,8 @@ export default function CatalogueView({ categorySlug = null, categories, applica
               <select aria-label="Filter by application" className={select} value={application} onChange={(e) => update({ application: e.target.value })}>
                 <option value="">All applications</option>{applications.map((a) => <option key={a.slug} value={a.slug}>{a.name}</option>)}
               </select>
-              <select aria-label="Filter by function" className={select} value={fn} onChange={(e) => update({ fn: e.target.value })}>
-                <option value="">All functions</option>{solutions.map((s) => <option key={s.slug} value={s.slug}>{s.name}</option>)}
+              <select aria-label="Filter by formulation goal" className={select} value={fn} onChange={(e) => update({ fn: e.target.value })}>
+                <option value="">All formulation goals</option>{solutions.map((s) => <option key={s.slug} value={s.slug}>{s.name}</option>)}
               </select>
               <select aria-label="Sort products" className={select} value={sort} onChange={(e) => update({ sort: e.target.value })}>
                 <option value="name-asc">Name A to Z</option><option value="name-desc">Name Z to A</option>
@@ -97,7 +97,7 @@ export default function CatalogueView({ categorySlug = null, categories, applica
 
         <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-mist-600" aria-live="polite">
-            {loading ? 'Loading products' : <><AnimatedNumber value={meta?.total ?? 0} className="font-semibold text-ink" /> {meta?.total === 1 ? 'product' : 'products'}</>}
+            {loading ? 'Loading ingredients' : <><AnimatedNumber value={meta?.total ?? 0} className="font-semibold text-ink" /> {meta?.total === 1 ? 'ingredient' : 'ingredients'}</>}
           </p>
           <AnimatePresence>
             {hasFilters && !loading && (
@@ -117,7 +117,7 @@ export default function CatalogueView({ categorySlug = null, categories, applica
         </div>
 
         <div className="mt-4">
-          {loading ? <Loading label="Loading products" />
+          {loading ? <Loading label="Loading ingredients" />
             : error ? <ErrorState error={error} onRetry={reload} />
             : !data?.length ? <EmptyState action={hasFilters && <Button variant="outlineDark" className="mt-6" onClick={clear}>Clear filters</Button>} />
             : (

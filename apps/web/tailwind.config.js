@@ -5,9 +5,9 @@ export default {
     extend: {
       colors: {
         navy: { 950: '#171717', 900: '#212121', 800: '#2B2B2B', 700: '#383838', 600: '#4A4A4A' },
-        electric: { DEFAULT: '#4E8A2E', 600: '#3F7024', 300: '#86B363' },
+        electric: { DEFAULT: '#3F7024', 600: '#35651F', 300: '#86B363' },
         cyan: { DEFAULT: '#6FAF42', 300: '#9CCB78' },
-        mist: { DEFAULT: '#F2F3F0', 200: '#E4E7E2', 400: '#A6ADA3', 600: '#5F675C' },
+        mist: { DEFAULT: '#F7F6F2', 200: '#E7E4DC', 400: '#A6ADA3', 600: '#5F675C' },
         ink: '#2B2B2B',
       },
       fontFamily: {

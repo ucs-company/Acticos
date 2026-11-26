@@ -10,18 +10,16 @@ import { ErrorState } from '@/components/States';
 import Seo from '@/components/Seo';
 import { SITE } from '@/config/site';
 
-const Placeholder = ({ children = '[DATA REQUIRED]' }) => <span className="rounded bg-amber-100 px-2 py-0.5 text-sm text-amber-900">{children}</span>;
-
 export default function ProductDetail({ slug }) {
   const { data: p, loading, error, reload } = useAsync(() => catalogue.product(slug), [slug]);
 
-  if (loading) return <PageHero title="Loading product" crumbs={[{ label: 'Home', to: '/' }, { label: 'Products', to: '/products' }]} />;
+  if (loading) return <PageHero title="Loading ingredient" crumbs={[{ label: 'Home', to: '/' }, { label: 'Ingredients', to: '/products' }]} />;
   if (error) {
     return (
       <>
-        <PageHero title={error.status === 404 ? 'Product not found' : 'Could not load product'} crumbs={[{ label: 'Home', to: '/' }, { label: 'Products', to: '/products' }]} />
+        <PageHero title={error.status === 404 ? 'Ingredient not found' : 'Could not load ingredient'} crumbs={[{ label: 'Home', to: '/' }, { label: 'Ingredients', to: '/products' }]} />
         <div className="container-page py-16">
-          {error.status === 404 ? <Button to="/products">Browse all products</Button> : <ErrorState error={error} onRetry={reload} />}
+          {error.status === 404 ? <Button to="/products">Browse all ingredients</Button> : <ErrorState error={error} onRetry={reload} />}
         </div>
       </>
     );
@@ -40,7 +38,7 @@ export default function ProductDetail({ slug }) {
           <Reveal>
             <nav aria-label="Breadcrumb" className="text-sm text-white/60">
               <ol className="flex flex-wrap gap-2">
-                <li><Link to="/products" className="hover:underline">Products</Link></li><li aria-hidden="true">/</li>
+                <li><Link to="/products" className="hover:underline">Ingredients</Link></li><li aria-hidden="true">/</li>
                 <li><Link to={`/products/${p.category.slug}`} className="hover:underline">{p.category.name}</Link></li><li aria-hidden="true">/</li>
                 <li aria-current="page" className="text-white">{p.name}</li>
               </ol>
@@ -61,13 +59,21 @@ export default function ProductDetail({ slug }) {
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-cyan">At a glance</p>
               <dl className="mt-5 space-y-4 text-[15px]">
                 <div><dt className="text-white/50">Category</dt><dd className="mt-1 text-white/85">{p.category.name}</dd></div>
-                <div><dt className="text-white/50">Product code</dt><dd className="mt-1 text-white/85">{p.code || '—'}</dd></div>
+                <div><dt className="text-white/50">Ingredient code</dt><dd className="mt-1 text-white/85">{p.code || '—'}</dd></div>
                 <div>
                   <dt className="text-white/50">Applications</dt>
                   <dd className="mt-2 flex flex-wrap gap-2">
                     {p.applications.length ? p.applications.map((application) => <Link key={application.slug} to={`/applications/${application.slug}`} className="rounded-full border border-white/15 px-3 py-1 text-sm text-white/80 transition-colors hover:border-cyan hover:text-cyan">{application.name}</Link>) : '—'}
                   </dd>
                 </div>
+                {p.solutions?.length ? (
+                  <div>
+                    <dt className="text-white/50">Formulation goals</dt>
+                    <dd className="mt-2 flex flex-wrap gap-2">
+                      {p.solutions.map((solution) => <Link key={solution.slug} to={`/products?fn=${solution.slug}`} className="rounded-full border border-cyan/30 bg-cyan/10 px-3 py-1 text-sm text-white/85 transition-colors hover:border-cyan hover:text-cyan">{solution.name}</Link>)}
+                    </dd>
+                  </div>
+                ) : null}
               </dl>
             </div>
           </Reveal>
@@ -76,23 +82,23 @@ export default function ProductDetail({ slug }) {
 
       <div className="container-page grid gap-14 py-16 lg:grid-cols-[2fr_1fr] lg:py-24">
         <div className="space-y-14">
-          <Reveal as="section" aria-labelledby="ov"><h2 id="ov" className="text-2xl font-semibold">Product overview</h2>
-            <p className="mt-4 max-w-[65ch] leading-relaxed text-mist-600">{isMissing(p.description) ? <Placeholder>[DATA REQUIRED: product description]</Placeholder> : p.description}</p></Reveal>
+          <Reveal as="section" aria-labelledby="ov"><h2 id="ov" className="text-2xl font-semibold">Ingredient overview</h2>
+            <p className="mt-4 max-w-[65ch] leading-relaxed text-mist-600">{isMissing(p.description) ? 'Detailed ingredient information is available on request from our technical team.' : p.description}</p></Reveal>
           <Reveal as="section" aria-labelledby="ap"><h2 id="ap" className="text-2xl font-semibold">Applications</h2>
-            <ul className="mt-4 flex flex-wrap gap-2">{p.applications.length ? p.applications.map((a) => <li key={a.slug}><Link to={`/applications/${a.slug}`} className="inline-block rounded-full border border-ink/15 px-4 py-2 transition hover:border-electric hover:text-electric">{a.name}</Link></li>) : <li><Placeholder /></li>}</ul></Reveal>
-          <Reveal as="section" aria-labelledby="kf"><h2 id="kf" className="text-2xl font-semibold">Key features</h2>
-            {p.benefits?.length ? <ul className="mt-4 list-disc space-y-2 pl-5">{p.benefits.map((b) => <li key={b}>{b}</li>)}</ul> : <p className="mt-4"><Placeholder>[DATA REQUIRED: key features]</Placeholder></p>}</Reveal>
+            <ul className="mt-4 flex flex-wrap gap-2">{p.applications.length ? p.applications.map((a) => <li key={a.slug}><Link to={`/applications/${a.slug}`} className="inline-block rounded-full border border-ink/15 px-4 py-2 transition hover:border-electric hover:text-electric">{a.name}</Link></li>) : <li className="text-mist-600">Application guidance is available on request.</li>}</ul></Reveal>
+          <Reveal as="section" aria-labelledby="kf"><h2 id="kf" className="text-2xl font-semibold">Key benefits</h2>
+            {p.benefits?.length ? <ul className="mt-4 list-disc space-y-2 pl-5">{p.benefits.map((b) => <li key={b}>{b}</li>)}</ul> : <p className="mt-4 text-mist-600">Contact our technical team for detailed benefits and formulation guidance.</p>}</Reveal>
           <Reveal as="section" aria-labelledby="ti"><h2 id="ti" className="text-2xl font-semibold">Technical information</h2>
             <div className="mt-4 overflow-x-auto rounded-2xl border border-ink/10">
               <table className="w-full text-left text-[15px]"><tbody className="divide-y divide-ink/10">
                 {(tech || [['Appearance', null], ['CAS number', null], ['Recommended usage level', null], ['Packaging', null]]).map(([k, v]) => (
-                  <tr key={k}><th scope="row" className="w-1/3 bg-mist px-5 py-3 font-medium">{k}</th><td className="px-5 py-3">{v ?? <Placeholder />}</td></tr>
+                  <tr key={k}><th scope="row" className="w-1/3 bg-mist px-5 py-3 font-medium">{k}</th><td className="px-5 py-3">{v ?? <span className="text-mist-600">Available on request</span>}</td></tr>
                 ))}
               </tbody></table>
             </div></Reveal>
           <Reveal as="section" aria-labelledby="dc"><h2 id="dc" className="text-2xl font-semibold">Documents</h2>
             {p.documents?.length ? <ul className="mt-4 space-y-2">{p.documents.map((d) => <li key={d.id}><a className="text-electric hover:underline" href={d.fileUrl}>{d.title} ({d.type})</a></li>)}</ul>
-              : <p className="mt-4 text-mist-600">TDS and SDS will be listed here once uploaded. <Placeholder>[DATA REQUIRED]</Placeholder></p>}</Reveal>
+              : <div className="mt-4"><p className="text-mist-600">TDS and SDS documents are available on request from our technical team.</p><Button to={`/technical-enquiry${q}`} variant="outlineDark" className="mt-4">Request TDS / SDS</Button></div>}</Reveal>
         </div>
         <Reveal as="aside" className="h-fit rounded-3xl bg-mist p-7 lg:sticky lg:top-28">
           <h2 className="text-xl font-semibold">Need this for a formulation?</h2>
@@ -103,7 +109,7 @@ export default function ProductDetail({ slug }) {
 
       {p.related?.length > 0 && (
         <section className="bg-mist py-16 md:py-20"><div className="container-page">
-          <Reveal><h2 className="text-3xl font-semibold">Related products</h2></Reveal>
+          <Reveal><h2 className="text-3xl font-semibold">Related ingredients</h2></Reveal>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">{p.related.map((r, i) => <ProductCard key={r.slug} product={r} index={i} />)}</div>
         </div></section>
       )}

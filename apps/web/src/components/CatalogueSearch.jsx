@@ -40,14 +40,14 @@ export default function CatalogueSearch({ value, onChange }) {
 
   return (
     <div ref={root} className="relative sm:col-span-2 xl:col-span-4">
-      <label htmlFor="cat-search" className="sr-only">Search by product name, INCI or application</label>
+      <label htmlFor="cat-search" className="sr-only">Search by ingredient name, INCI or application</label>
       <input
         id="cat-search"
         type="search"
         value={value}
         onChange={(event) => { onChange(event.target.value); setOpen(true); }}
         onFocus={() => setOpen(true)}
-        placeholder="Search product name, INCI or application"
+        placeholder="Search ingredient name, INCI or application"
         className="field pr-12"
         autoComplete="off"
         aria-autocomplete="list"
