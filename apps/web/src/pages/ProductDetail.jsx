@@ -3,7 +3,6 @@ import { catalogue } from '@/services/catalogue';
 import { useAsync } from '@/hooks/useAsync';
 import { isMissing } from '@/utils/format';
 import PageHero from '@/components/PageHero';
-import SceneCanvas from '@/animations/SceneCanvas';
 import ProductCard from '@/components/ProductCard';
 import Reveal from '@/animations/Reveal';
 import Button from '@/components/Button';
@@ -37,7 +36,7 @@ export default function ProductDetail({ slug }) {
       <Seo title={p.seoTitle || p.name} description={p.seoDescription || `${p.name} (INCI: ${p.inci}) from Acticos.`} path={`/products/${p.slug}`} jsonLd={jsonLd} />
       <section className="relative overflow-hidden bg-navy-900 pt-32 text-white md:pt-40">
         <div className="grid-bg absolute inset-0 opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent)]" aria-hidden="true" />
-        <div className="container-page relative grid items-center gap-10 pb-16 md:pb-24 lg:grid-cols-2">
+        <div className="container-page relative grid items-center gap-10 pb-16 md:pb-24 lg:grid-cols-[1.4fr_1fr]">
           <Reveal>
             <nav aria-label="Breadcrumb" className="text-sm text-white/60">
               <ol className="flex flex-wrap gap-2">
@@ -57,8 +56,20 @@ export default function ProductDetail({ slug }) {
               <Button to={`/technical-enquiry${q}`} variant="outline" size="lg">Technical Enquiry</Button>
             </div>
           </Reveal>
-          <Reveal delay={0.12} className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-navy-800">
-            {p.imageUrl ? <img src={p.imageUrl} alt={p.name} className="h-full w-full object-cover" loading="lazy" /> : <SceneCanvas scene={p.category.visual} label={`${p.category.name} concept animation`} />}
+          <Reveal delay={0.12}>
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-cyan">At a glance</p>
+              <dl className="mt-5 space-y-4 text-[15px]">
+                <div><dt className="text-white/50">Category</dt><dd className="mt-1 text-white/85">{p.category.name}</dd></div>
+                <div><dt className="text-white/50">Product code</dt><dd className="mt-1 text-white/85">{p.code || '—'}</dd></div>
+                <div>
+                  <dt className="text-white/50">Applications</dt>
+                  <dd className="mt-2 flex flex-wrap gap-2">
+                    {p.applications.length ? p.applications.map((application) => <Link key={application.slug} to={`/applications/${application.slug}`} className="rounded-full border border-white/15 px-3 py-1 text-sm text-white/80 transition-colors hover:border-cyan hover:text-cyan">{application.name}</Link>) : '—'}
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </Reveal>
         </div>
       </section>

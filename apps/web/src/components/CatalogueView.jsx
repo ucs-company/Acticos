@@ -52,7 +52,7 @@ export default function CatalogueView({ categorySlug = null, categories, applica
               const active = (c.slug || null) === (categorySlug || null);
               return (
                 <li key={c.slug || 'all'} className="shrink-0">
-                  <Link to={c.to} aria-current={active ? 'page' : undefined} className={`relative block overflow-hidden rounded-xl px-4 py-3 text-[15px] leading-snug transition-colors ${active ? 'font-medium text-white' : 'hover:bg-mist'}`}>
+                  <Link to={c.to} aria-current={active ? 'page' : undefined} className={`relative block overflow-hidden rounded-xl border px-4 py-2.5 text-[15px] leading-snug transition-colors ${active ? 'border-navy-900 font-medium text-white' : 'border-ink/15 bg-white text-ink hover:border-electric/50 hover:bg-mist'}`}>
                     {active && <motion.span layoutId="cat-active" className="absolute inset-0 rounded-xl bg-navy-900" transition={{ type: 'spring', stiffness: 380, damping: 34 }} />}
                     <span className="relative z-10">{c.name}</span>
                   </Link>
