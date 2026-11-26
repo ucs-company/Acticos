@@ -13,6 +13,7 @@ export default function Footer() {
           <Logo size="lg" />
           <p className="mt-4 max-w-xs text-[15px] leading-relaxed">{SITE.tagline}</p>
           <p className="mt-6 text-sm">{SITE.legalName}</p>
+          <p className="mt-1 max-w-xs text-sm leading-relaxed">{SITE.contact.offices[0].address}</p>
         </div>
         <div>
           <h2 className="mb-4 text-sm font-medium text-white">Products</h2>
@@ -30,6 +31,7 @@ export default function Footer() {
             <li><Link className="hover:text-white" to="/technical-enquiry">Technical Enquiry</Link></li>
           </ul>
           <p className="mt-6 text-sm">{SITE.contact.email}</p>
+          <p className="mt-1 text-sm">{SITE.contact.phone}</p>
         </div>
       </div>
       <div className="border-t border-white/10 py-6 text-center text-sm">© {new Date().getFullYear()} {SITE.legalName}. All rights reserved.</div>
