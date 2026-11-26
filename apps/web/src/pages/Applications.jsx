@@ -27,7 +27,7 @@ export default function Applications() {
             </GsapRevealGrid>
           )}
         </div>
-        <Reveal><Button to="/products" className="mt-12">Explore Ingredients</Button></Reveal>
+        <Reveal><div className="mt-12 flex flex-wrap gap-3"><Button to="/products">Explore Ingredients</Button><Button to="/find-ingredient" variant="outlineDark">Find my ingredient</Button></div></Reveal>
       </div>
     </>
   );

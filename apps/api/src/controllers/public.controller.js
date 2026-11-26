@@ -128,7 +128,7 @@ export async function sitemap(c) {
 
   const staticPaths = [
     '', '/products', '/applications', '/solutions', '/about', '/resources', '/contact',
-    '/request-quote', '/request-sample', '/technical-enquiry',
+    '/find-ingredient', '/request-quote', '/request-sample', '/technical-enquiry',
   ];
 
   const urls = [

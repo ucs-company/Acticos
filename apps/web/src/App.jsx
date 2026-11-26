@@ -6,6 +6,7 @@ import { AuthProvider } from '@/hooks/useAuth';
 const lz = (f) => lazy(f);
 const Home = lz(() => import('@/pages/Home'));
 const Products = lz(() => import('@/pages/Products'));
+const FindIngredient = lz(() => import('@/pages/FindIngredient'));
 const Applications = lz(() => import('@/pages/Applications'));
 const ApplicationDetail = lz(() => import('@/pages/ApplicationDetail'));
 const Solutions = lz(() => import('@/pages/Solutions'));
@@ -31,6 +32,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="products" element={<Products />} />
           <Route path="products/:slug" element={<Products />} />
+          <Route path="find-ingredient" element={<FindIngredient />} />
           <Route path="applications" element={<Applications />} />
           <Route path="applications/:slug" element={<ApplicationDetail />} />
           <Route path="solutions" element={<Solutions />} />

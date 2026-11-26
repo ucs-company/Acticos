@@ -11,6 +11,8 @@ import { Loading, ErrorState, EmptyState } from './States';
 import Reveal from '@/animations/Reveal';
 import AnimatedNumber from '@/animations/AnimatedNumber';
 import Button from './Button';
+import CatalogueSearch from './CatalogueSearch';
+import MobileFilterSheet from './MobileFilterSheet';
 
 const PAGE_SIZE = 9;
 
@@ -18,6 +20,7 @@ const PAGE_SIZE = 9;
 export default function CatalogueView({ categorySlug = null, categories, applications, solutions }) {
   const [params, setParams] = useSearchParams();
   const [qInput, setQInput] = useState(params.get('q') || '');
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const q = useDebounce(qInput, 300);
   const application = params.get('application') || '';
   const fn = params.get('fn') || '';
@@ -37,7 +40,8 @@ export default function CatalogueView({ categorySlug = null, categories, applica
     () => catalogue.products({ q, category, application, fn, sort, page, pageSize: PAGE_SIZE }),
     [q, category, application, fn, sort, page],
   );
-  const hasFilters = Boolean(q || application || fn || (!categorySlug && category));
+  const hasFilters = Boolean(q || application || fn || (!categorySlug && category) || sort !== 'name-asc');
+  const activeCount = [application, fn, !categorySlug && category, sort !== 'name-asc' && sort].filter(Boolean).length;
   const clear = () => { setQInput(''); setParams({}, { replace: true }); };
   const select = 'field !py-2.5 !text-[15px]';
   const sidebar = useMemo(() => [{ slug: '', name: 'All Products', to: '/products' }, ...categories.map((c) => ({ ...c, to: `/products/${c.slug}` }))], [categories]);
@@ -65,43 +69,31 @@ export default function CatalogueView({ categorySlug = null, categories, applica
 
       <div className="min-w-0">
         <Reveal>
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            <div className="relative sm:col-span-2 xl:col-span-4">
-              <label htmlFor="cat-search" className="sr-only">Search by product name, INCI or application</label>
-              <input id="cat-search" type="search" value={qInput} onChange={(e) => setQInput(e.target.value)} placeholder="Search product name, INCI or application" className="field pr-12" />
-              <AnimatePresence>
-                {qInput && (
-                  <motion.button
-                    type="button"
-                    onClick={() => setQInput('')}
-                    aria-label="Clear search"
-                    className="absolute right-2.5 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full text-mist-600 hover:bg-mist hover:text-ink"
-                    initial={{ opacity: 0, scale: 0.6 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.6 }}
-                    transition={{ duration: 0.18 }}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" /></svg>
-                  </motion.button>
-                )}
-              </AnimatePresence>
-            </div>
-            {!categorySlug && (
-              <select aria-label="Filter by category" className={select} value={category} onChange={(e) => update({ category: e.target.value })}>
-                <option value="">All categories</option>{categories.map((c) => <option key={c.slug} value={c.slug}>{c.name}</option>)}
+          <div className="grid min-w-0 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <CatalogueSearch value={qInput} onChange={setQInput} />
+            <button type="button" onClick={() => setFiltersOpen(true)} className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-lg border border-ink/15 bg-white px-4 text-sm font-medium text-ink sm:hidden">
+              <svg className="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M3 5h14M5.5 10h9M8 15h4" /></svg>
+              Filters{activeCount ? ` (${activeCount})` : ''}
+            </button>
+            <div className="hidden gap-3 sm:col-span-2 sm:grid sm:grid-cols-2 xl:col-span-4 xl:grid-cols-4">
+              {!categorySlug && (
+                <select aria-label="Filter by category" className={select} value={category} onChange={(e) => update({ category: e.target.value })}>
+                  <option value="">All categories</option>{categories.map((c) => <option key={c.slug} value={c.slug}>{c.name}</option>)}
+                </select>
+              )}
+              <select aria-label="Filter by application" className={select} value={application} onChange={(e) => update({ application: e.target.value })}>
+                <option value="">All applications</option>{applications.map((a) => <option key={a.slug} value={a.slug}>{a.name}</option>)}
               </select>
-            )}
-            <select aria-label="Filter by application" className={select} value={application} onChange={(e) => update({ application: e.target.value })}>
-              <option value="">All applications</option>{applications.map((a) => <option key={a.slug} value={a.slug}>{a.name}</option>)}
-            </select>
-            <select aria-label="Filter by function" className={select} value={fn} onChange={(e) => update({ fn: e.target.value })}>
-              <option value="">All functions</option>{solutions.map((s) => <option key={s.slug} value={s.slug}>{s.name}</option>)}
-            </select>
-            <select aria-label="Sort products" className={select} value={sort} onChange={(e) => update({ sort: e.target.value })}>
-              <option value="name-asc">Name A to Z</option><option value="name-desc">Name Z to A</option>
-            </select>
+              <select aria-label="Filter by function" className={select} value={fn} onChange={(e) => update({ fn: e.target.value })}>
+                <option value="">All functions</option>{solutions.map((s) => <option key={s.slug} value={s.slug}>{s.name}</option>)}
+              </select>
+              <select aria-label="Sort products" className={select} value={sort} onChange={(e) => update({ sort: e.target.value })}>
+                <option value="name-asc">Name A to Z</option><option value="name-desc">Name Z to A</option>
+              </select>
+            </div>
           </div>
         </Reveal>
+        <MobileFilterSheet open={filtersOpen} onClose={() => setFiltersOpen(false)} categories={categories} applications={applications} solutions={solutions} category={category} application={application} fn={fn} sort={sort} update={update} clear={clear} categorySlug={categorySlug} activeCount={activeCount} />
 
         <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-mist-600" aria-live="polite">

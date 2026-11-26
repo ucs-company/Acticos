@@ -15,10 +15,16 @@ export default function ApplicationsSection() {
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-electric">Applications</p>
           <h2 className="h-section mt-3">Built for the formats you develop</h2>
           <p className="lead mt-4">Find ingredients by where they will be used. Each application links to the matching products.</p>
-          <Link to="/applications" className="mt-6 inline-flex items-center gap-2 font-medium text-electric hover:underline">
-            All applications
-            <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
-          </Link>
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+            <Link to="/applications" className="inline-flex items-center gap-2 font-medium text-electric hover:underline">
+              All applications
+              <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
+            </Link>
+            <Link to="/find-ingredient" className="inline-flex items-center gap-2 font-medium text-electric hover:underline">
+              Find your ingredient
+              <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
+            </Link>
+          </div>
         </Reveal>
         {loading ? <Loading /> : error || !applications?.length ? <EmptyState title="Applications unavailable" text="Please try again shortly." /> : (
           <GsapRevealGrid className="grid gap-4 sm:grid-cols-2" count={applications.length}>

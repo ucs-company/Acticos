@@ -5,6 +5,10 @@ import Header from './Header';
 import Footer from './Footer';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import ScrollProgress from '@/components/ScrollProgress';
+import QuickViewDrawer from '@/components/QuickViewDrawer';
+import CompareBar from '@/components/CompareBar';
+import CompareDialog from '@/components/CompareDialog';
+import { ProductActionsProvider } from '@/providers/ProductActionsProvider';
 import useMotionEnabled from '@/hooks/useMotionEnabled';
 import { useEffect } from 'react';
 
@@ -20,7 +24,7 @@ export default function MainLayout() {
   const reduce = !useMotionEnabled();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
   return (
-    <>
+    <ProductActionsProvider>
       <a href="#main" className="skip-link">Skip to content</a>
       <ScrollProgress />
       <Header />
@@ -39,6 +43,9 @@ export default function MainLayout() {
         </ErrorBoundary>
       </main>
       <Footer />
-    </>
+      <QuickViewDrawer />
+      <CompareBar />
+      <CompareDialog />
+    </ProductActionsProvider>
   );
 }

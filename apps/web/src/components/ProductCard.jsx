@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import useMotionEnabled from '@/hooks/useMotionEnabled';
 import { isMissing } from '@/utils/format';
+import ProductActions from './ProductActions';
+import CopyButton from './CopyButton';
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -21,9 +23,12 @@ export default function ProductCard({ product, index = 0 }) {
     >
       <span className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan to-electric opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true" />
 
-      <div className="flex flex-wrap items-start justify-between gap-2">
-        <span className="max-w-[72%] truncate rounded-full bg-mist px-2.5 py-1 text-xs font-medium text-mist-600">{category.name}</span>
-        <span className="text-xs font-medium uppercase tracking-wide text-mist-600">{code}</span>
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <span className="inline-block max-w-full truncate rounded-full bg-mist px-2.5 py-1 text-xs font-medium text-mist-600">{category.name}</span>
+          <p className="mt-2 text-xs font-medium uppercase tracking-wide text-mist-600">{code}</p>
+        </div>
+        <ProductActions product={product} className="shrink-0" />
       </div>
 
       <h3 className="mt-4 text-xl font-semibold leading-snug">
@@ -31,7 +36,10 @@ export default function ProductCard({ product, index = 0 }) {
       </h3>
 
       <dl className="mt-4 text-[15px]">
-        <dt className="text-xs font-medium text-mist-600">INCI</dt>
+        <div className="flex items-center justify-between gap-2">
+          <dt className="text-xs font-medium text-mist-600">INCI</dt>
+          <CopyButton value={inci} label="Copy" className="border-0 px-1.5 py-1 hover:bg-mist" />
+        </div>
         <dd className={`mt-1 line-clamp-3 ${isMissing(inci) ? 'text-amber-700' : 'text-ink'}`}>{inci}</dd>
       </dl>
 

@@ -6,6 +6,7 @@ import { Loading } from '@/components/States';
 import SceneCanvas from '@/animations/SceneCanvas';
 import CatalogueView from '@/components/CatalogueView';
 import Seo from '@/components/Seo';
+import Button from '@/components/Button';
 import ProductDetail from './ProductDetail';
 
 export default function Products() {
@@ -41,7 +42,9 @@ export default function Products() {
         badge={badge}
         crumbs={[{ label: 'Home', to: '/' }, { label: 'Products', to: category ? '/products' : undefined }, ...(category ? [{ label: category.name }] : [])]}
         visual={category ? <SceneCanvas scene={category.visual} label={`${category.name} visual`} /> : <SceneCanvas scene="active" label="Molecules moving through a formulation" />}
-      />
+      >
+        <Button to="/find-ingredient" variant="outline" size="lg">Find my ingredient</Button>
+      </PageHero>
       <CatalogueView categorySlug={category?.slug || null} categories={data.categories} applications={data.applications} solutions={data.solutions} />
     </>
   );
