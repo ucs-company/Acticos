@@ -164,7 +164,7 @@ function RecordForm({ config, resource, initial, onClose, onSaved }) {
                     <input id="f-imageUrl" className="field" placeholder="Cloudinary secure URL" value={edit.imageUrl ?? ''} onChange={(event) => set('imageUrl', event.target.value)} />
                     <div className="flex flex-wrap items-center gap-3">
                       <label htmlFor="record-image" className="cursor-pointer rounded-full border border-ink/15 px-4 py-2 text-sm font-medium transition-colors hover:border-electric/40 hover:text-electric">Choose PNG/JPG</label>
-                      <input id="record-image" type="file" accept=".png,.jpg,.jpeg" className="sr-only" onChange={(event) => setFile(event.target.files?.[0] || null)} />
+                      <input id="record-image" type="file" accept=".png,.jpg,.jpeg" className="sr-only" style={{ position: 'fixed', top: 0, left: 0 }} onChange={(event) => setFile(event.target.files?.[0] || null)} />
                       <span className="min-w-0 truncate text-sm text-mist-600">{file ? file.name : 'or upload a new image'}</span>
                       {previewSrc && <button type="button" onClick={() => setViewImage(true)} className="text-sm font-medium text-electric hover:underline">View image</button>}
                     </div>

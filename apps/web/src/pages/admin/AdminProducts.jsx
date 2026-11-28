@@ -132,7 +132,7 @@ function ProductForm({ initial, categories, applications, solutions, onClose, on
                   <input id="img-url" className="field" placeholder="Cloudinary URL or /images/products/example.webp" value={v.imageUrl || ''} onChange={(event) => set('imageUrl', event.target.value)} />
                   <div className="flex flex-wrap items-center gap-3">
                     <label htmlFor="img-file" className="cursor-pointer rounded-full border border-ink/15 px-4 py-2 text-sm font-medium transition-colors hover:border-electric/40 hover:text-electric">Choose PNG/JPG</label>
-                    <input id="img-file" type="file" accept=".png,.jpg,.jpeg" className="sr-only" onChange={(event) => setImageFile(event.target.files?.[0] || null)} />
+                    <input id="img-file" type="file" accept=".png,.jpg,.jpeg" className="sr-only" style={{ position: 'fixed', top: 0, left: 0 }} onChange={(event) => setImageFile(event.target.files?.[0] || null)} />
                     <span className="min-w-0 truncate text-sm text-mist-600">{imageFile ? imageFile.name : 'or upload a new image'}</span>
                     {previewSrc && <button type="button" onClick={() => setViewImage(true)} className="text-sm font-medium text-electric hover:underline">View image</button>}
                   </div>
