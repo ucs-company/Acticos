@@ -3,7 +3,7 @@ import { authenticate, authorize, ROLES } from '../middleware/auth.js';
 import { validate } from '../middleware/validate.js';
 import { loginLimiter } from '../middleware/rateLimit.js';
 import {
-  loginSchema, productSchema, productListQuery, categorySchema, taxonomySchema, blogSchema, statusSchema,
+  loginSchema, changePasswordSchema, productSchema, productListQuery, categorySchema, taxonomySchema, blogSchema, statusSchema,
 } from '../validators/index.js';
 import * as authController from '../controllers/auth.controller.js';
 import * as admin from '../controllers/admin.controller.js';
@@ -14,6 +14,7 @@ router.post('/auth/login', loginLimiter, validate(loginSchema), authController.l
 
 router.use('*', authenticate);
 router.get('/auth/me', authController.me);
+router.post('/auth/change-password', validate(changePasswordSchema), authController.changeUserPassword);
 router.get('/stats', admin.stats);
 
 router.get('/products', validate(productListQuery, 'query'), admin.listAdminProducts);

@@ -31,6 +31,15 @@ export const contactSchema = z.object({
 
 export const loginSchema = z.object({ email, password: z.string().min(1).max(200) });
 
+export const changePasswordSchema = z.object({
+  currentPassword: z.string().min(1, 'Current password is required').max(200),
+  newPassword: z.string().min(8, 'Use at least 8 characters').max(200),
+  confirmPassword: z.string().min(1, 'Confirm password is required').max(200),
+}).refine((data) => data.newPassword === data.confirmPassword, {
+  message: 'New passwords do not match',
+  path: ['confirmPassword'],
+});
+
 export const productListQuery = z.object({
   q: z.string().trim().max(100).optional(),
   category: z.string().max(100).optional(),

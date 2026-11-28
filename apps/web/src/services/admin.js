@@ -3,6 +3,7 @@ import { request, get, qs, tokenStore } from './api';
 export const admin = {
   login: (email, password) => request('/admin/auth/login', { method: 'POST', body: { email, password } }).then((j) => j.data),
   me: () => get('/admin/auth/me', { auth: true }),
+  changePassword: (body) => request('/admin/auth/change-password', { method: 'POST', body, auth: true }),
   stats: () => get('/admin/stats', { auth: true }),
   products: (params) => request(`/admin/products${qs(params)}`, { auth: true }),
   product: (id) => get(`/admin/products/${id}`, { auth: true }),

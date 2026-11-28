@@ -23,6 +23,7 @@ const AdminCrud = lz(() => import('@/pages/admin/AdminCrud'));
 const AdminDocuments = lz(() => import('@/pages/admin/AdminDocuments'));
 const AdminInbox = lz(() => import('@/pages/admin/AdminTable').then((m) => ({ default: m.AdminInbox })));
 const AdminNote = lz(() => import('@/pages/admin/AdminTable').then((m) => ({ default: m.AdminNote })));
+const AdminSettings = lz(() => import('@/pages/admin/AdminSettings'));
 
 export default function App() {
   return (
@@ -56,7 +57,7 @@ export default function App() {
           <Route path="resources" element={<AdminNote title="Resources" text="Resources are Documents grouped by type. Upload TDS, SDS, catalogues and guides under Documents." />} />
           <Route path="inbox/:type" element={<AdminInbox />} />
           <Route path="seo" element={<AdminNote title="SEO" text="Per-product and per-category SEO title and description are edited on each record. The sitemap is served at /sitemap.xml." />} />
-          <Route path="settings" element={<AdminNote title="Settings" text="[DATA REQUIRED] Site-wide settings such as contact details live in apps/web/src/config/site.js until a settings table is added." />} />
+          <Route path="settings" element={<AdminSettings />} />
         </Route>
       </Routes>
     </AuthProvider>

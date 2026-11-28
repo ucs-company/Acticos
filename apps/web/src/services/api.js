@@ -32,7 +32,7 @@ export async function request(path, { method = 'GET', body, auth = false, signal
   let json = null;
   try { json = await res.json(); } catch { /* non-JSON response */ }
   if (!res.ok || !json?.success) {
-    if (res.status === 401 && auth) tokenStore.clear();
+    if (res.status === 401 && auth && json?.error?.code !== 'INVALID_CURRENT_PASSWORD') tokenStore.clear();
     throw new ApiError(json?.error?.message || 'Something went wrong', res.status, json?.error?.code, json?.error?.details);
   }
   return json;
