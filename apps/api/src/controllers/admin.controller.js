@@ -7,7 +7,7 @@ import { slugify } from '../utils/slug.js';
 import { stringifyJson } from '../utils/json.js';
 import { listProducts, getProductById, getProductBySlug } from '../services/product.service.js';
 import { getUploadedFile } from '../utils/upload.js';
-import { uploadFile, deleteFile } from '../services/storage.service.js';
+import { uploadFile, deleteFile, uploadImage, deleteImage } from '../services/storage.service.js';
 
 const nullable = (value) => {
   if (value === undefined || value === null || value === '') return null;
@@ -31,7 +31,7 @@ const CRUD = {
   },
   applications: {
     table: 'applications',
-    fields: ['slug', 'name', 'description'],
+    fields: ['slug', 'name', 'description', 'imageUrl'],
     order: 'name ASC',
     slugSource: 'name',
   },
@@ -189,28 +189,65 @@ export function setProductStatus(status) {
 }
 
 export async function deleteProduct(c) {
-  const result = await dbRun(getEnv(c).DB, 'DELETE FROM products WHERE id = ?', c.req.param('id'));
-  if (!result.meta?.changes) throw new ApiError(404, 'NOT_FOUND', 'Product not found');
-  return ok(c, { id: c.req.param('id') });
+  const env = getEnv(c);
+  const id = c.req.param('id');
+  const existing = await dbFirst(env.DB, 'SELECT id, imagePublicId FROM products WHERE id = ?', id);
+  if (!existing) throw new ApiError(404, 'NOT_FOUND', 'Product not found');
+  await dbRun(env.DB, 'DELETE FROM products WHERE id = ?', id);
+  await deleteImage(env, existing.imagePublicId);
+  return ok(c, { id });
 }
 
 export async function uploadProductImage(c) {
   const env = getEnv(c);
+  const id = c.req.param('id');
   const file = await getUploadedFile(c, 'image');
   if (file.mimetype === 'application/pdf') {
     throw new ApiError(415, 'UNSUPPORTED_FILE', 'Product images must be PNG or JPG');
   }
 
-  const uploaded = await uploadFile(env, file, 'products');
-  const result = await dbRun(
+  const existing = await dbFirst(env.DB, 'SELECT id, slug, imagePublicId FROM products WHERE id = ?', id);
+  if (!existing) throw new ApiError(404, 'NOT_FOUND', 'Product not found');
+
+  const uploaded = await uploadImage(env, file, 'products', existing.slug);
+  await dbRun(
     env.DB,
-    'UPDATE products SET imageUrl = ?, updatedAt = ? WHERE id = ?',
+    'UPDATE products SET imageUrl = ?, imagePublicId = ?, updatedAt = ? WHERE id = ?',
     uploaded.url,
+    uploaded.publicId,
     nowIso(),
-    c.req.param('id'),
+    id,
   );
-  if (!result.meta?.changes) throw new ApiError(404, 'NOT_FOUND', 'Product not found');
-  return ok(c, { id: c.req.param('id'), imageUrl: uploaded.url });
+  if (existing.imagePublicId && existing.imagePublicId !== uploaded.publicId) {
+    await deleteImage(env, existing.imagePublicId);
+  }
+  return ok(c, { id, imageUrl: uploaded.url, imagePublicId: uploaded.publicId });
+}
+
+export async function uploadApplicationImage(c) {
+  const env = getEnv(c);
+  const id = c.req.param('id');
+  const file = await getUploadedFile(c, 'image');
+  if (file.mimetype === 'application/pdf') {
+    throw new ApiError(415, 'UNSUPPORTED_FILE', 'Application images must be PNG or JPG');
+  }
+
+  const existing = await dbFirst(env.DB, 'SELECT id, slug, imagePublicId FROM applications WHERE id = ?', id);
+  if (!existing) throw new ApiError(404, 'NOT_FOUND', 'Application not found');
+
+  const uploaded = await uploadImage(env, file, 'applications', existing.slug);
+  await dbRun(
+    env.DB,
+    'UPDATE applications SET imageUrl = ?, imagePublicId = ?, updatedAt = ? WHERE id = ?',
+    uploaded.url,
+    uploaded.publicId,
+    nowIso(),
+    id,
+  );
+  if (existing.imagePublicId && existing.imagePublicId !== uploaded.publicId) {
+    await deleteImage(env, existing.imagePublicId);
+  }
+  return ok(c, { id, imageUrl: uploaded.url, imagePublicId: uploaded.publicId });
 }
 
 function crud(resource) {
@@ -271,9 +308,15 @@ function crud(resource) {
       return ok(c, row);
     },
     remove: async (c) => {
-      const result = await dbRun(getEnv(c).DB, `DELETE FROM ${config.table} WHERE id = ?`, c.req.param('id'));
+      const env = getEnv(c);
+      const id = c.req.param('id');
+      const existing = config.table === 'applications'
+        ? await dbFirst(env.DB, 'SELECT imagePublicId FROM applications WHERE id = ?', id)
+        : null;
+      const result = await dbRun(env.DB, `DELETE FROM ${config.table} WHERE id = ?`, id);
       if (!result.meta?.changes) throw new ApiError(404, 'NOT_FOUND', 'Record not found');
-      return ok(c, { id: c.req.param('id') });
+      if (existing?.imagePublicId) await deleteImage(env, existing.imagePublicId);
+      return ok(c, { id });
     },
   };
 }

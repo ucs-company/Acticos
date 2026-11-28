@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
-import { Navigate, NavLink, Outlet } from 'react-router-dom';
+import { Suspense, useEffect, useState } from 'react';
+import { Navigate, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import Logo from '@/components/Logo';
 import Seo from '@/components/Seo';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 export const ADMIN_NAV = [
   ['Dashboard', ''], ['Products', 'products'], ['Categories', 'categories'], ['Applications', 'applications'], ['Solutions', 'solutions'],
@@ -10,8 +11,16 @@ export const ADMIN_NAV = [
   ['Technical Enquiries', 'inbox/technical'], ['Contact Messages', 'inbox/contact'], ['SEO', 'seo'], ['Settings', 'settings'],
 ];
 
+const AdminPageLoading = () => (
+  <div className="grid min-h-[50vh] place-items-center" role="status" aria-live="polite">
+    <span className="h-8 w-8 animate-spin rounded-full border-2 border-ink/15 border-t-electric" />
+    <span className="sr-only">Loading admin page</span>
+  </div>
+);
+
 export default function AdminLayout() {
   const { user, ready, logout } = useAuth();
+  const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -50,7 +59,11 @@ export default function AdminLayout() {
           <p className="ml-auto text-right text-sm text-mist-600"><span className="max-[380px]:hidden">{user.name} </span><span className="rounded bg-mist px-2 py-0.5 text-xs">{user.role}</span></p>
           <button onClick={logout} className="shrink-0 text-sm font-medium text-electric">Sign out</button>
         </header>
-        <div className="p-5 md:p-8"><Outlet /></div>
+        <div className="p-5 md:p-8">
+          <ErrorBoundary key={pathname}>
+            <Suspense fallback={<AdminPageLoading />}><Outlet /></Suspense>
+          </ErrorBoundary>
+        </div>
       </div>
     </div>
   );

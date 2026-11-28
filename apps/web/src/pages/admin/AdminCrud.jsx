@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { admin } from '@/services/admin';
 import { useAsync } from '@/hooks/useAsync';
 import { useAuth } from '@/hooks/useAuth';
 import { Loading, ErrorState, EmptyState } from '@/components/States';
+import ImageLightbox from '@/components/ImageLightbox';
 import Button from '@/components/Button';
+import { cloudinaryImage } from '@/utils/images';
 
 const VISUALS = [
   ['preservative', 'Preservative'],
@@ -31,12 +33,14 @@ const RESOURCES = {
   applications: {
     title: 'Applications',
     singular: 'application',
-    blank: { name: '', slug: '', description: '' },
+    imageUpload: true,
+    blank: { name: '', slug: '', description: '', imageUrl: '' },
     columns: [['Name', 'name'], ['Slug', 'slug'], ['Description', 'description']],
     fields: [
       { key: 'name', label: 'Name', required: true },
       { key: 'slug', label: 'Slug', hint: 'Auto-generated from name if blank' },
       { key: 'description', label: 'Description', type: 'textarea', rows: 3, wide: true },
+      { key: 'imageUrl', label: 'Image URL', hint: 'Cloudinary secure URL', wide: true },
     ],
   },
   solutions: {
@@ -69,9 +73,25 @@ const blankFor = (config) => ({ ...config.blank });
 
 function RecordForm({ config, resource, initial, onClose, onSaved }) {
   const [edit, setEdit] = useState({ ...initial });
+  const [file, setFile] = useState(null);
+  const [filePreview, setFilePreview] = useState('');
+  const [viewImage, setViewImage] = useState(false);
   const [err, setErr] = useState(null);
   const [busy, setBusy] = useState(false);
   const set = (key, value) => setEdit((current) => ({ ...current, [key]: value }));
+
+  useEffect(() => {
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = previous; };
+  }, []);
+
+  useEffect(() => {
+    if (!file) { setFilePreview(''); return undefined; }
+    const objectUrl = URL.createObjectURL(file);
+    setFilePreview(objectUrl);
+    return () => URL.revokeObjectURL(objectUrl);
+  }, [file]);
 
   const save = async (event) => {
     event.preventDefault();
@@ -79,7 +99,8 @@ function RecordForm({ config, resource, initial, onClose, onSaved }) {
     setErr(null);
     try {
       const body = Object.fromEntries(config.fields.map((field) => [field.key, edit[field.key]]));
-      await admin.save(resource, initial.id, body);
+      const saved = await admin.save(resource, initial.id, body);
+      if (config.imageUpload && file) await admin.uploadApplicationImage(saved.data?.id || initial.id, file);
       onSaved();
     } catch (error) {
       setErr(error);
@@ -88,34 +109,81 @@ function RecordForm({ config, resource, initial, onClose, onSaved }) {
     }
   };
 
+  const previewSrc = filePreview || edit.imageUrl || '';
   return (
-    <div role="dialog" aria-modal="true" aria-label={initial.id ? `Edit ${config.singular}` : `Add ${config.singular}`} className="fixed inset-0 z-50 grid place-items-start overflow-y-auto bg-black/50 p-4">
-      <form onSubmit={save} className="mx-auto my-8 w-full max-w-2xl space-y-4 rounded-2xl bg-white p-6">
-        <h2 className="text-2xl font-semibold">{initial.id ? `Edit ${config.singular}` : `Add ${config.singular}`}</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {config.fields.map((field) => (
-            <div key={field.key} className={field.wide ? 'sm:col-span-2' : ''}>
-              <label htmlFor={`f-${field.key}`} className="mb-1 block text-sm font-medium">{field.label}</label>
-              {field.type === 'textarea' ? (
-                <textarea id={`f-${field.key}`} rows={field.rows || 3} required={field.required} className="field" value={edit[field.key] ?? ''} onChange={(event) => set(field.key, event.target.value)} />
-              ) : field.type === 'select' ? (
-                <select id={`f-${field.key}`} className="field" value={edit[field.key] ?? ''} onChange={(event) => set(field.key, event.target.value)}>
-                  {field.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
-                </select>
-              ) : (
-                <input id={`f-${field.key}`} type={field.type || 'text'} required={field.required} className="field" value={edit[field.key] ?? ''} onChange={(event) => set(field.key, event.target.value)} />
-              )}
-              {field.hint && <p className="mt-1 text-xs text-mist-600">{field.hint}</p>}
+    <>
+      <div role="dialog" aria-modal="true" aria-label={initial.id ? `Edit ${config.singular}` : `Add ${config.singular}`} className="fixed inset-0 z-50 flex items-stretch justify-center overflow-hidden bg-black/50 sm:items-center sm:p-4">
+        <form onSubmit={save} className="flex h-full w-full max-w-2xl flex-col overflow-hidden bg-white sm:h-auto sm:max-h-[calc(100dvh-2rem)] sm:rounded-2xl">
+          <div className="flex shrink-0 items-start justify-between gap-4 border-b border-ink/10 px-5 py-4 sm:px-6">
+            <h2 className="text-xl font-semibold sm:text-2xl">{initial.id ? `Edit ${config.singular}` : `Add ${config.singular}`}</h2>
+            <button type="button" onClick={onClose} aria-label="Close" className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-ink/10 text-mist-600 transition-colors hover:border-electric/40 hover:text-electric">
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" /></svg>
+            </button>
+          </div>
+
+          <div className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain px-5 py-5 sm:px-6">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {config.fields.map((field) => {
+                if (config.imageUpload && field.key === 'imageUrl') return null;
+                return (
+                  <div key={field.key} className={field.wide ? 'sm:col-span-2' : ''}>
+                    <label htmlFor={`f-${field.key}`} className="mb-1 block text-sm font-medium">{field.label}</label>
+                    {field.type === 'textarea' ? (
+                      <textarea id={`f-${field.key}`} rows={field.rows || 3} required={field.required} className="field" value={edit[field.key] ?? ''} onChange={(event) => set(field.key, event.target.value)} />
+                    ) : field.type === 'select' ? (
+                      <select id={`f-${field.key}`} className="field" value={edit[field.key] ?? ''} onChange={(event) => set(field.key, event.target.value)}>
+                        {field.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+                      </select>
+                    ) : (
+                      <input id={`f-${field.key}`} type={field.type || 'text'} required={field.required} className="field" value={edit[field.key] ?? ''} onChange={(event) => set(field.key, event.target.value)} />
+                    )}
+                    {field.hint && <p className="mt-1 text-xs text-mist-600">{field.hint}</p>}
+                  </div>
+                );
+              })}
             </div>
-          ))}
-        </div>
-        {err && <p role="alert" className="rounded-lg bg-red-50 p-3 text-sm text-red-800">{err.message}{err.details && Object.entries(err.details).map(([key, message]) => ` ${key}: ${message}`)}</p>}
-        <div className="flex justify-end gap-3">
-          <Button type="button" variant="outlineDark" onClick={onClose}>Cancel</Button>
-          <Button type="submit" disabled={busy}>{busy ? 'Saving' : 'Save'}</Button>
-        </div>
-      </form>
-    </div>
+            {config.imageUpload && (
+              <div className="rounded-xl border border-ink/10 p-4">
+                <label htmlFor="f-imageUrl" className="mb-2 block text-sm font-medium">Application image</label>
+                <div className="flex flex-col gap-4 sm:flex-row">
+                  <button
+                    type="button"
+                    onClick={() => previewSrc && setViewImage(true)}
+                    disabled={!previewSrc}
+                    aria-label={previewSrc ? 'View application image' : 'No application image yet'}
+                    className={`group relative grid h-28 w-40 shrink-0 place-items-center overflow-hidden rounded-xl border border-ink/10 bg-mist ${previewSrc ? 'cursor-zoom-in' : 'cursor-default'}`}
+                  >
+                    {previewSrc ? (
+                      <>
+                        <img src={cloudinaryImage(previewSrc, 480, 360)} alt="Application preview" className="h-full w-full object-cover" />
+                        <span className="absolute inset-x-0 bottom-0 bg-black/60 py-1 text-center text-[11px] font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">Click to view</span>
+                      </>
+                    ) : <span className="px-2 text-center text-xs text-mist-600">No image yet</span>}
+                  </button>
+                  <div className="min-w-0 flex-1 space-y-2">
+                    <input id="f-imageUrl" className="field" placeholder="Cloudinary secure URL" value={edit.imageUrl ?? ''} onChange={(event) => set('imageUrl', event.target.value)} />
+                    <div className="flex flex-wrap items-center gap-3">
+                      <label htmlFor="record-image" className="cursor-pointer rounded-full border border-ink/15 px-4 py-2 text-sm font-medium transition-colors hover:border-electric/40 hover:text-electric">Choose PNG/JPG</label>
+                      <input id="record-image" type="file" accept=".png,.jpg,.jpeg" className="sr-only" onChange={(event) => setFile(event.target.files?.[0] || null)} />
+                      <span className="min-w-0 truncate text-sm text-mist-600">{file ? file.name : 'or upload a new image'}</span>
+                      {previewSrc && <button type="button" onClick={() => setViewImage(true)} className="text-sm font-medium text-electric hover:underline">View image</button>}
+                    </div>
+                    {file && <p className="text-xs text-mist-600">Uploads when you save.</p>}
+                  </div>
+                </div>
+              </div>
+            )}
+            {err && <p role="alert" className="rounded-lg bg-red-50 p-3 text-sm text-red-800">{err.message}{err.details && Object.entries(err.details).map(([key, message]) => ` ${key}: ${message}`)}</p>}
+          </div>
+
+          <div className="flex shrink-0 justify-end gap-3 border-t border-ink/10 bg-white px-5 py-4 sm:px-6">
+            <Button type="button" variant="outlineDark" onClick={onClose}>Cancel</Button>
+            <Button type="submit" disabled={busy}>{busy ? 'Saving' : 'Save'}</Button>
+          </div>
+        </form>
+      </div>
+      {viewImage && <ImageLightbox src={previewSrc} alt={edit.name ? `${edit.name} image` : `${config.singular} image`} onClose={() => setViewImage(false)} />}
+    </>
   );
 }
 

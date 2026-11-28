@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 const str = (max = 200) => z.string().trim().max(max);
 const required = (label, max = 200) => str(max).min(1, `${label} is required`);
-const optional = (max = 200) => str(max).optional().or(z.literal('')).transform((v) => v || undefined);
+const optional = (max = 200) => z.union([str(max), z.literal(''), z.null()]).optional().transform((v) => (v === '' || v == null ? undefined : v));
 const email = z.string().trim().toLowerCase().email('Enter a valid email address').max(200);
 const captcha = { turnstileToken: z.string().optional() };
 
@@ -43,7 +43,7 @@ export const productListQuery = z.object({
 });
 
 export const productSchema = z.object({
-  name: required('Name'), slug: optional(200), code: optional(60), inci: required('INCI', 500),
+  name: required('Name'), slug: optional(200), code: optional(60), inci: required('INCI', 2000),
   categoryId: required('Category'), description: optional(5000),
   benefits: z.array(str(300)).default([]), functions: z.array(str(100)).default([]),
   technicalInfo: z.record(z.any()).nullable().optional(),
@@ -58,7 +58,7 @@ export const categorySchema = z.object({
   sortOrder: z.coerce.number().int().default(0), seoTitle: optional(200), seoDescription: optional(300),
 });
 
-export const taxonomySchema = z.object({ name: required('Name'), slug: optional(200), description: optional(2000) });
+export const taxonomySchema = z.object({ name: required('Name'), slug: optional(200), description: optional(2000), imageUrl: optional(500) });
 
 export const blogSchema = z.object({
   title: required('Title'), slug: optional(200), excerpt: optional(500), content: required('Content', 50000),

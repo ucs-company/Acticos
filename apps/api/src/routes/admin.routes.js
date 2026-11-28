@@ -33,6 +33,7 @@ router.delete('/categories/:id', authorize(...ROLES.MANAGE), admin.categoryCrud.
 router.get('/applications', admin.applicationCrud.list);
 router.post('/applications', validate(taxonomySchema), admin.applicationCrud.create);
 router.put('/applications/:id', validate(taxonomySchema), admin.applicationCrud.update);
+router.post('/applications/:id/image', admin.uploadApplicationImage);
 router.delete('/applications/:id', authorize(...ROLES.MANAGE), admin.applicationCrud.remove);
 
 router.get('/solutions', admin.solutionCrud.list);

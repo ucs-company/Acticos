@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMotionEnabled from '@/hooks/useMotionEnabled';
 import { catalogue } from '@/services/catalogue';
@@ -14,7 +14,7 @@ import Button from './Button';
 import CatalogueSearch from './CatalogueSearch';
 import MobileFilterSheet from './MobileFilterSheet';
 
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 12;
 
 // Reusable listing: used by /products (all) and each category page.
 export default function CatalogueView({ categorySlug = null, categories, applications, solutions }) {
@@ -44,29 +44,9 @@ export default function CatalogueView({ categorySlug = null, categories, applica
   const activeCount = [application, fn, !categorySlug && category, sort !== 'name-asc' && sort].filter(Boolean).length;
   const clear = () => { setQInput(''); setParams({}, { replace: true }); };
   const select = 'field !py-2.5 !text-[15px]';
-  const sidebar = useMemo(() => [{ slug: '', name: 'All Products', to: '/products' }, ...categories.map((c) => ({ ...c, to: `/products/${c.slug}` }))], [categories]);
 
   return (
-    <div className="container-page grid min-w-0 gap-10 py-14 lg:grid-cols-[260px_1fr]">
-      <aside aria-label="Product categories" className="min-w-0">
-        <Reveal as="nav" className="min-w-0 lg:sticky lg:top-28">
-          <h2 className="mb-3 text-sm font-medium text-mist-600">Categories</h2>
-          <ul className="flex flex-wrap gap-2 pb-2 lg:flex-col lg:gap-1">
-            {sidebar.map((c) => {
-              const active = (c.slug || null) === (categorySlug || null);
-              return (
-                <li key={c.slug || 'all'} className="shrink-0">
-                  <Link to={c.to} aria-current={active ? 'page' : undefined} className={`relative block overflow-hidden rounded-xl border px-4 py-2.5 text-[15px] leading-snug transition-colors ${active ? 'border-navy-900 font-medium text-white' : 'border-ink/15 bg-white text-ink hover:border-electric/50 hover:bg-mist'}`}>
-                    {active && <motion.span layoutId="cat-active" className="absolute inset-0 rounded-xl bg-navy-900" transition={{ type: 'spring', stiffness: 380, damping: 34 }} />}
-                    <span className="relative z-10">{c.name}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </Reveal>
-      </aside>
-
+    <div className="container-page min-w-0 py-14">
       <div className="min-w-0">
         <Reveal>
           <div className="grid min-w-0 gap-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -121,7 +101,7 @@ export default function CatalogueView({ categorySlug = null, categories, applica
             : error ? <ErrorState error={error} onRetry={reload} />
             : !data?.length ? <EmptyState action={hasFilters && <Button variant="outlineDark" className="mt-6" onClick={clear}>Clear filters</Button>} />
             : (
-              <motion.div layout={!reduce} className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+              <motion.div layout={!reduce} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {data.map((p, i) => <ProductCard key={p.slug} product={p} index={i} />)}
               </motion.div>
             )}

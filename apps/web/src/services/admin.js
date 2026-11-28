@@ -20,6 +20,11 @@ export const admin = {
     body.append('image', file);
     return request(`/admin/products/${id}/image`, { method: 'POST', body, auth: true });
   },
+  uploadApplicationImage: (id, file) => {
+    const body = new FormData();
+    body.append('image', file);
+    return request(`/admin/applications/${id}/image`, { method: 'POST', body, auth: true });
+  },
   inbox: (type) => get(`/admin/inbox/${type}`, { auth: true }),
   updateInbox: (type, id, body) => request(`/admin/inbox/${type}/${id}`, { method: 'PATCH', body, auth: true }),
 };

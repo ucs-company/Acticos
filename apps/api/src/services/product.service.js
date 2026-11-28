@@ -35,6 +35,7 @@ export function mapProduct(row) {
     functions: parseArray(row.functions),
     technicalInfo: parseObject(row.technicalInfo),
     imageUrl: row.imageUrl,
+    imagePublicId: row.imagePublicId,
     seoTitle: row.seoTitle,
     seoDescription: row.seoDescription,
     status: row.status,
