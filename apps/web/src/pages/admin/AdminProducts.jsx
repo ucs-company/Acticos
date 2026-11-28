@@ -13,9 +13,22 @@ const blank = {
   isSample: false, technicalInfo: null,
 };
 
+const TECH_FIELDS = ['Appearance', 'Recommended Usage', 'Solubility', 'CAS number', 'pH', 'Packaging', 'Storage', 'Shelf life'];
+
+const TECH_PLACEHOLDERS = {
+  Appearance: 'e.g. Clear liquid',
+  'Recommended Usage': 'e.g. 0.5–2%',
+  Solubility: 'e.g. Water soluble',
+  'CAS number': 'e.g. 1234-56-7',
+  pH: 'e.g. 5.0–7.0',
+  Packaging: 'e.g. 25 kg drum',
+  Storage: 'e.g. Cool, dry place',
+  'Shelf life': 'e.g. 24 months',
+};
+
 function ProductForm({ initial, categories, applications, solutions, onClose, onSaved }) {
   const [v, setV] = useState({ ...blank, ...initial });
-  const [techText, setTechText] = useState(initial.technicalInfo ? JSON.stringify(initial.technicalInfo, null, 2) : '');
+  const [tech, setTech] = useState(() => ({ ...(initial.technicalInfo || {}) }));
   const [imageFile, setImageFile] = useState(null);
   const [imagePreview, setImagePreview] = useState('');
   const [viewImage, setViewImage] = useState(false);
@@ -41,10 +54,8 @@ function ProductForm({ initial, categories, applications, solutions, onClose, on
     setBusy(true);
     setErr(null);
     try {
-      let technicalInfo = null;
-      if (techText.trim()) {
-        try { technicalInfo = JSON.parse(techText); } catch { throw new Error('Technical info must be valid JSON'); }
-      }
+      const filledTech = Object.fromEntries(Object.entries(tech).filter(([, value]) => String(value ?? '').trim() !== ''));
+      const technicalInfo = Object.keys(filledTech).length ? filledTech : null;
       const payload = {
         ...v,
         slug: v.slug || undefined,
@@ -106,7 +117,18 @@ function ProductForm({ initial, categories, applications, solutions, onClose, on
             </fieldset>
             <div><L id="d">Description</L><textarea id="d" rows={4} className="field" value={v.description || ''} onChange={(event) => set('description', event.target.value)} /></div>
             <div><L id="b">Benefits (one per line)</L><textarea id="b" rows={3} className="field" value={(v.benefits || []).join('\n')} onChange={(event) => set('benefits', event.target.value.split('\n').filter(Boolean))} /></div>
-            <div><L id="t">Technical info (JSON)</L><textarea id="t" rows={5} className="field font-mono text-sm" placeholder='{"Appearance":"Clear liquid","Recommended Usage":"0.5–1%"}' value={techText} onChange={(event) => setTechText(event.target.value)} /></div>
+            <fieldset className="rounded-xl border border-ink/10 p-4">
+              <legend className="px-1 text-sm font-medium">Technical information</legend>
+              <p className="mb-3 text-xs text-mist-600">Fill what you know. Blank fields show “Available on request” on the site. “Recommended Usage” and “Solubility” also appear in the compare table.</p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {TECH_FIELDS.map((key, index) => (
+                  <div key={key}>
+                    <label htmlFor={`tech-${index}`} className="mb-1 block text-sm font-medium">{key}</label>
+                    <input id={`tech-${index}`} className="field" placeholder={TECH_PLACEHOLDERS[key]} value={tech[key] ?? ''} onChange={(event) => setTech((current) => ({ ...current, [key]: event.target.value }))} />
+                  </div>
+                ))}
+              </div>
+            </fieldset>
             <div className="grid gap-4 sm:grid-cols-2">
               <div><L id="s1">SEO title</L><input id="s1" className="field" value={v.seoTitle || ''} onChange={(event) => set('seoTitle', event.target.value)} /></div>
               <div><L id="s2">SEO description</L><input id="s2" className="field" value={v.seoDescription || ''} onChange={(event) => set('seoDescription', event.target.value)} /></div>
